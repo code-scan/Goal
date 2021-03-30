@@ -2,11 +2,12 @@ package Ghttp
 
 import (
 	"log"
+	"net/http"
 )
 
 func (h *Http) SetHeader(key string, value string) {
 	if h.HttpRequest == nil {
-		log.Panicln("HttpRequest Is not Init")
+		log.Println("[!]HttpRequest Is not Init")
 		return
 	}
 	if head := h.HttpRequest.Header.Get(key); head != "" {
@@ -18,7 +19,6 @@ func (h *Http) SetHeader(key string, value string) {
 func (h *Http) SetUserAgent(agent string) {
 	h.SetHeader("User-Agent", agent)
 }
-
 
 //设置请求content type
 func (h *Http) SetContentType(s string) {
