@@ -2,7 +2,13 @@
 
 - #### Ghttp    Http客户端
 - #### Gconvert 常用类型转化方法
-- #### Gsensor  信息获取探针,支持fofa,SecurityTrails,shodan
+- #### Gsensor  信息获取探针
+    - [x] Fofa
+    - [x] SecurityTrails
+    - [x] shodan
+    - [x] Bufferover
+    - [x] Crt.sh
+
 - #### Gproxy   反向socks5代理
 
 ## Ghttp client
@@ -63,6 +69,12 @@
 ```go
     code:=httpclient.StatusCode()
     log.Println(code)
+```
+
+#### 设置代理
+```go
+	httpClient.SetProxy("http://127.0.0.1:6152")
+	httpClient.SetProxy("socks5://ss:ss@127.0.0.1:6153")
 ```
 
 ## Gconvert 类型转化
@@ -165,6 +177,12 @@ r := Gnet.GetIPList("192.168.1.1/24")
 ### Shodan
  - 端口获取
  
+### Bufferover
+ - 子域名获取
+
+### Crt.sh
+ - 子域名获取
+
   具体代码可看tests/sensor_test.go
 
 ## Gproxy 反向Socks5代理

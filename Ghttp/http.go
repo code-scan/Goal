@@ -2,9 +2,13 @@ package Ghttp
 
 import (
 	"crypto/tls"
+	"golang.org/x/net/proxy"
 	"io"
+	"log"
+	"net"
 	"net/http"
 	"net/http/cookiejar"
+	"net/url"
 	"time"
 )
 
@@ -66,5 +70,41 @@ func (h *Http) SetTimeOut(t int) {
 func (h *Http) IgnoreSSL() {
 	h.HttpTransport.TLSClientConfig = &tls.Config{
 		InsecureSkipVerify: true,
+	}
+}
+
+func (h *Http) SetProxy(proxyUrl string) {
+	u, _ := url.Parse(proxyUrl)
+	switch u.Scheme {
+	case "https":
+		log.Println("use proxy", u.Scheme)
+		h.HttpTransport.Proxy = http.ProxyURL(u)
+	case "http":
+		log.Println("use proxy", u.Scheme)
+		h.HttpTransport.Proxy = http.ProxyURL(u)
+	case "socks5":
+		pwd, _ := u.User.Password()
+		auth := proxy.Auth{
+			User:     u.User.Username(),
+			Password: pwd,
+		}
+
+		h.SetSocksProxy(u.Host, &auth)
+
+	}
+
+}
+func (h *Http) SetSocksProxy(proxyUrl string, auth *proxy.Auth) {
+	baseDialer := &net.Dialer{
+		Timeout:   30 * time.Second,
+		KeepAlive: 30 * time.Second,
+	}
+	dialSocksProxy, err := proxy.SOCKS5("tcp", proxyUrl, auth, baseDialer)
+	if err != nil {
+		log.Println("[!]SetSocksProxy Error: ", err)
+		return
+	}
+	if contextDialer, ok := dialSocksProxy.(proxy.ContextDialer); ok {
+		h.HttpTransport.DialContext = contextDialer.DialContext
 	}
 }
