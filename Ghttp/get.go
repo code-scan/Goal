@@ -1,4 +1,4 @@
-package http
+package Ghttp
 
 // Get 方法
 func (h *Http) Get(url string) error {

@@ -1,4 +1,4 @@
-package http
+package Ghttp
 
 import (
 	"crypto/tls"
@@ -10,8 +10,8 @@ import (
 
 type Http struct {
 	HttpClient      http.Client    // http客户端
-	HttpRequest     *http.Request  // http 请求
-	HttpResponse    *http.Response // http 返回值
+	HttpRequest     *http.Request  // Ghttp 请求
+	HttpResponse    *http.Response // Ghttp 返回值
 	HttpRequestUrl  string         //请求的url
 	HttpRequestType string         // 请求方法，GET/POST
 	HttpContentType string         // 请求类型 json/form-url-encoide
@@ -43,7 +43,7 @@ func (h *Http) New(method, urls string) error {
 	return err
 
 	//if h.HttpRequest == nil {
-	//	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
+	//	h.HttpRequest, err = Ghttp.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	//} else if h.isSession { //如果不是第一次请求 并且开启了session 则复用之前的request即可
 	//	var uri *url.URL
 	//	uri, err = url.Parse(h.HttpRequestUrl)
