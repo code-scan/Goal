@@ -1,7 +1,17 @@
 # Goal Go Red-Team 工具类
 
 - #### Ghttp    Http客户端
+    - [x] Get/Post/Head..
+    - [x] SetHeader
+    - [x] Set/GetCookie
+    - [x] Http/Socks5 Proxy
+    
 - #### Gconvert 常用类型转化方法
+    - [x] HostName/Domain To Ip
+    - [x] Icmp Host Alive Check
+    - [x] Tcp Port Status Check
+    - [x] CIDR To Addres List
+    
 - #### Gsensor  信息获取探针
     - [x] Fofa
     - [x] SecurityTrails
@@ -10,7 +20,16 @@
     - [x] Crt.sh
 
 - #### Gproxy   反向socks5代理
+    - [x] Reverse Socks5 Proxy
+    
 - #### Gfile    常用文件操作
+    - [x] Unzip 
+    - [x] CheckExist
+    - [x] ReadFileToString
+    - [x] WriteStringToFile
+    - [x] GetFileList
+
+
 ## Ghttp client
 
 ### 使用方法
