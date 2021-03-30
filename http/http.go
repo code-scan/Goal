@@ -1,9 +1,11 @@
 package http
 
 import (
+	"crypto/tls"
 	"io"
 	"net/http"
 	"net/http/cookiejar"
+	"time"
 )
 
 type Http struct {
@@ -14,6 +16,7 @@ type Http struct {
 	HttpRequestType string         // 请求方法，GET/POST
 	HttpContentType string         // 请求类型 json/form-url-encoide
 	HttpBody        io.Reader      // 返回内容
+	HttpTransport   http.Transport
 	Cookie          *cookiejar.Jar //cookie的值
 	isSession       bool           //是否创建session
 }
@@ -51,4 +54,17 @@ func (h *Http) New(method, urls string) error {
 	//	h.HttpRequest.URL = uri
 	//}
 
+}
+func (h *Http) SetTimeOut(t int) {
+	td := time.Duration(t)
+	h.HttpTransport.TLSHandshakeTimeout = td * time.Second
+	h.HttpTransport.ResponseHeaderTimeout = td * time.Second
+	h.HttpTransport.IdleConnTimeout = td * time.Second
+	h.HttpTransport.ExpectContinueTimeout = td * time.Second
+
+}
+func (h *Http) IgnoreSSL() {
+	h.HttpTransport.TLSClientConfig = &tls.Config{
+		InsecureSkipVerify: true,
+	}
 }

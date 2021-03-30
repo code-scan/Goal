@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="" />
+    <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/http/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,33 +17,21 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert/num.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-              <folding>
-                <element signature="e#17#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/http.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+            <state relative-caret-position="768">
+              <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert/url.go">
+        <entry file="file://$PROJECT_DIR$/http/response.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="105">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <element signature="e#17#45#0" expanded="true" />
+                <element signature="e#14#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,32 +40,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/convert_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="90">
               <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="35" selection-end-column="68" />
-              <folding>
-                <element signature="e#14#72#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="564">
-                <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/convert/encode.go">
+        <entry file="file://$PROJECT_DIR$/tests/http_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="165">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="e#14#95#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +76,9 @@
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
@@ -103,20 +88,20 @@
         <option value="$PROJECT_DIR$/http_test.go" />
         <option value="$PROJECT_DIR$/http/http_test.go" />
         <option value="$PROJECT_DIR$/http/post.go" />
-        <option value="$PROJECT_DIR$/http/response.go" />
         <option value="$PROJECT_DIR$/http/get.go" />
         <option value="$PROJECT_DIR$/http/head.go" />
         <option value="$PROJECT_DIR$/http/session.go" />
         <option value="$PROJECT_DIR$/http/set.go" />
         <option value="$PROJECT_DIR$/http/cookie.go" />
-        <option value="$PROJECT_DIR$/http/http.go" />
-        <option value="$PROJECT_DIR$/tests/http_test.go" />
         <option value="$PROJECT_DIR$/convert/int.go" />
         <option value="$PROJECT_DIR$/convert/num.go" />
         <option value="$PROJECT_DIR$/convert/url.go" />
         <option value="$PROJECT_DIR$/convert/encode.go" />
         <option value="$PROJECT_DIR$/tests/convert_test.go" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/http/http.go" />
+        <option value="$PROJECT_DIR$/http/response.go" />
+        <option value="$PROJECT_DIR$/tests/http_test.go" />
       </list>
     </option>
   </component>
@@ -126,6 +111,7 @@
     <option name="width" value="1707" />
     <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -139,6 +125,16 @@
               <item name="Goal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Goal" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Goal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Goal" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Goal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Goal" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -147,6 +143,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -173,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestConvert in github.com/code-scan/Goal/tests">
+  <component name="RunManager" selected="Go Test.TestHttp in github.com/code-scan/Goal/tests">
     <configuration name="TestConvert in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -220,26 +217,14 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestConvert in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestConvert in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestPost in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestHead in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 20m 14s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 20m 18s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 20m 23s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 20m 37s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 20m 43s.xml">
       <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -257,6 +242,18 @@
     </history-entry>
     <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.03.30 at 17h 38m 00s.xml">
       <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestHttp_in_github_com_code-scan_Goal_tests - 2021.03.30 at 18h 00m 04s.xml">
+      <configuration name="TestHttp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestHttp_in_github_com_code-scan_Goal_tests - 2021.03.30 at 18h 00m 23s.xml">
+      <configuration name="TestHttp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestHttp_in_github_com_code-scan_Goal_tests - 2021.03.30 at 18h 00m 33s.xml">
+      <configuration name="TestHttp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestHttp_in_github_com_code-scan_Goal_tests - 2021.03.30 at 18h 00m 46s.xml">
+      <configuration name="TestHttp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -309,13 +306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="595" column="5" selection-start-line="595" selection-start-column="5" selection-end-line="595" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="584" column="17" selection-start-line="584" selection-start-column="17" selection-end-line="584" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -406,16 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/response.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#14#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/cookie.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
@@ -433,19 +413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go.mod">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/http_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#14#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/fmt/print.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -457,13 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/http.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -515,23 +475,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/convert_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="35" selection-end-column="68" />
-          <folding>
-            <element signature="e#14#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/go.mod">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="564">
-            <caret line="113" column="29" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+          <first_editor relative-caret-position="348">
+            <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/http.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/net/http/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/response.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#14#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/convert_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="35" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/http_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#14#95#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
