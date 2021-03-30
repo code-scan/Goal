@@ -1,4 +1,9 @@
-# Goal Go 工具类
+# Goal Go Red-Team 工具类
+
+- #### Ghttp Http客户端
+- #### Gconvert 常用类型转化方法
+- #### Gsensor 信息获取探针,支持fofa,SecurityTrails,shodan
+
 
 ## Ghttp client
 
@@ -141,3 +146,23 @@ CIDR生成IP列表
 // 返回[]string
 r := Gnet.GetIPList("192.168.1.1/24")
 ```
+
+## 第三方API
+### Fofa
+ - 端口获取
+ - 子域名获取
+ - 同服获取
+ 
+ 具体代码可看tests/sensor_test.go
+
+### SecurityTrails
+ - A记录历史解析
+ - 子域名获取
+ - 同服获取
+ 
+  具体代码可看tests/sensor_test.go
+
+### Shodan
+ - 端口获取
+ 
+  具体代码可看tests/sensor_test.go

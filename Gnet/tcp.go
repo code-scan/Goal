@@ -2,7 +2,7 @@ package Gnet
 
 import (
 	"fmt"
-	"log"
+	//"log"
 	"net"
 	"strings"
 	"time"

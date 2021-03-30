@@ -36,7 +36,10 @@ func (h *Http) SetPostValues(values url.Values) {
 //json 格式的参数
 func (h *Http) SetPostJson(values map[string]interface{}) {
 	bytesData, err := json.Marshal(values)
-	log.Println(err)
+	if err != nil {
+		log.Println("[!] SetPostJson Error: ", err)
+
+	}
 	h.HttpBody = bytes.NewReader(bytesData)
 	h.SetContentType("json")
 	h.setParams()

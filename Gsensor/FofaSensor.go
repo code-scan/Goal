@@ -7,7 +7,6 @@ import (
 	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"strings"
-	"zhunhei.com/sensor"
 )
 
 type Fofa struct {
@@ -106,7 +105,8 @@ func (s *Fofa) send(query string) []byte {
 	query = base64.StdEncoding.EncodeToString([]byte(query))
 	urls := fmt.Sprintf("https://fofa.so/api/v1/search/all?email=%s&key=%s&qbase64=%s&size=10000", s.UserName, s.PassWord, query)
 	s.http.New("GET", urls)
-	resp, err := s.http.Send()
+	s.http.Execute()
+	resp, err := s.http.Byte()
 	if err != nil {
 		log.Println(err)
 		return result

@@ -3,6 +3,7 @@ package Ghttp
 import (
 	"io/ioutil"
 	"net/http"
+	"strings"
 )
 
 //发送请求
@@ -42,4 +43,9 @@ func (h Http) StatusCode() int {
 		return h.HttpResponse.StatusCode
 	}
 	return -1
+}
+func (h *Http) RespCookie() string {
+	cookies := h.HttpResponse.Header.Values("set-cookie")
+	cks := strings.Join(cookies, "; ")
+	return cks
 }
