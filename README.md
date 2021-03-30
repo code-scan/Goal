@@ -1,9 +1,9 @@
 # Goal Go Red-Team 工具类
 
-- #### Ghttp Http客户端
+- #### Ghttp    Http客户端
 - #### Gconvert 常用类型转化方法
-- #### Gsensor 信息获取探针,支持fofa,SecurityTrails,shodan
-
+- #### Gsensor  信息获取探针,支持fofa,SecurityTrails,shodan
+- #### Gproxy   反向socks5代理
 
 ## Ghttp client
 
@@ -147,7 +147,7 @@ CIDR生成IP列表
 r := Gnet.GetIPList("192.168.1.1/24")
 ```
 
-## 第三方API
+## Gsensor 第三方API
 ### Fofa
  - 端口获取
  - 子域名获取
@@ -166,3 +166,13 @@ r := Gnet.GetIPList("192.168.1.1/24")
  - 端口获取
  
   具体代码可看tests/sensor_test.go
+
+## Gproxy 反向Socks5代理
+
+```go
+	// 服务端运行
+	go Gproxy.ClientWait("8888") // 监听客户端端口，等待客户端链接
+	go Gproxy.ServerWait("8889") // 服务端端口，用户链接用于代理
+	// 客户端运行
+	Gproxy.RunProxy("127.0.0.1:8888")
+```
