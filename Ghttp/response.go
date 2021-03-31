@@ -1,8 +1,10 @@
 package Ghttp
 
 import (
+	"io"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -24,6 +26,9 @@ func (h *Http) Text() (string, error) {
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	}
+	if h.HttpResponse.Body != nil {
+		defer h.HttpResponse.Body.Close()
+	}
 	return string(result), err
 }
 
@@ -34,7 +39,25 @@ func (h *Http) Byte() ([]byte, error) {
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	}
+	if h.HttpResponse.Body != nil {
+		defer h.HttpResponse.Body.Close()
+	}
 	return result, err
+}
+func (h *Http) SaveToFile(file string) (bool, error) {
+	var err error
+	var f *os.File
+	f, err = os.Create(file)
+	if h.HttpResponse.Body != nil && err == nil {
+		defer h.HttpResponse.Body.Close()
+		defer f.Close()
+		_, err = io.Copy(f, h.HttpResponse.Body)
+	}
+	if err == nil {
+		return true, err
+	}
+	return false, err
+
 }
 
 // statuscode

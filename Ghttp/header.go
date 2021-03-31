@@ -2,7 +2,6 @@ package Ghttp
 
 import (
 	"log"
-	"net/http"
 )
 
 func (h *Http) SetHeader(key string, value string) {

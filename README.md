@@ -4,7 +4,9 @@
     - [x] Get/Post/Head..
     - [x] SetHeader
     - [x] Set/GetCookie
-    - [x] Http/Socks5 Proxy
+    - [x] Save To File
+    - [x] Use Http/Socks5 Proxy
+  
     
 - #### Gconvert 常用类型转化方法
     - [x] HostName/Domain To Ip
@@ -198,6 +200,7 @@ r := Gnet.GetIPList("192.168.1.1/24")
  
 ### Bufferover
  - 子域名获取
+  具体代码可看tests/sensor_test.go
 
 ### Crt.sh
  - 子域名获取
