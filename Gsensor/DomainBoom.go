@@ -39,11 +39,13 @@ func (s *DomainBoom) SetType(type_ string) {
 
 func (s *DomainBoom) GetResult() Result {
 	s.result = Result{}
+	if s.Type != "subdomain" {
+		return s.result
+	}
 	uri := fmt.Sprintf("http://domain.f5.pm/api.php?key=%s&domain=%s", s.PassWord, s.Domain)
 	s.http.New("GET", uri)
 	s.http.Execute()
 	ret, _ := s.http.Byte()
-	log.Println(string(ret))
 	dmresult := DomainBoomResult{}
 	if err := json.Unmarshal(ret, &dmresult); err != nil {
 		log.Println("[!]GetResult Error: ", err)

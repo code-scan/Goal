@@ -7,6 +7,7 @@ import (
 	"github.com/code-scan/Goal/Gnet"
 	"log"
 	"strconv"
+	"strings"
 )
 
 type SecurityTrails struct {
@@ -19,6 +20,7 @@ type SecurityTrails struct {
 	MaxPage  int
 	http     Ghttp.Http
 	result   Result
+	buildId  string
 }
 
 var Cookie string
@@ -65,7 +67,18 @@ func (s *SecurityTrails) Login(ReLogin bool) bool {
 	s.http.SetPostJson(postData)
 	s.http.Execute()
 	s.Cookie = s.http.RespCookie()
+	s.GetBuildId()
 	return true
+}
+func (s *SecurityTrails) GetBuildId() {
+	ret, err := s.httpReq("https://securitytrails.com/list/apex_domain/baidu.com")
+	if err != nil {
+		log.Println("[!] ", s.GetInfo(), " GetBuildId Error: ", err)
+	}
+	resp := strings.Split(string(ret), `"buildId":"`)
+	if len(resp) > 1 {
+		s.buildId = strings.Split(resp[1], `"`)[0]
+	}
 }
 
 //子域名查询
@@ -74,17 +87,17 @@ func (s *SecurityTrails) GetSubDomain(page int) {
 		s.result = Result{}
 	}
 	uri := "https://securitytrails.com/app/api/v1/list_new/hostname/" + s.Domain + "?page=" + strconv.Itoa(page)
-	uri = fmt.Sprintf("https://securitytrails.com/_next/data/06a0f69/list/apex_domain/%s.json?domain=%s&page=%d", s.Domain, s.Domain, page)
+	uri = fmt.Sprintf("https://securitytrails.com/_next/data/%s/list/apex_domain/%s.json?domain=%s&page=%d", s.buildId, s.Domain, s.Domain, page)
 	resp, err := s.httpReq(uri)
 
 	if err != nil {
-		log.Println("[!] GetSubDomain 1 Error: ", err)
+		log.Println("[!] ", s.GetInfo(), " GetSubDomain 1 Error: ", err)
 		return
 	}
 	hostName := SubDomainRespsonse{}
 	err = json.Unmarshal(resp, &hostName)
 	if err != nil {
-		log.Println("[!] GetSubDomain 2 Error: ", err)
+		log.Println("[!] ", s.GetInfo(), " GetSubDomain 2 Error: ", err)
 		return
 
 	}
@@ -112,7 +125,7 @@ func (s *SecurityTrails) GetSubDomain(page int) {
 func (s *SecurityTrails) GetHistory() {
 	s.result = Result{}
 	uri := "https://securitytrails.com/app/api/v1/history/" + s.Domain + "/dns/a"
-	uri = fmt.Sprintf("https://securitytrails.com/_next/data/06a0f69/domain/%s/history/a.json?domain=%s&type=a", s.Domain, s.Domain)
+	uri = fmt.Sprintf("https://securitytrails.com/_next/data/%s/domain/%s/history/a.json?domain=%s&type=a", s.buildId, s.Domain, s.Domain)
 	resp, err := s.httpReq(uri)
 	if err != nil {
 		log.Println("[!] GetHistory 1 Error: ", err)
@@ -137,7 +150,7 @@ func (s *SecurityTrails) GetIp(page int) {
 		s.result = Result{}
 	}
 	uri := "https://securitytrails.com/app/api/v1/list_new/ip/" + s.Domain + "?page=" + strconv.Itoa(page)
-	uri = fmt.Sprintf("https://securitytrails.com/_next/data/06a0f69/list/ip/%s.json?page=%d&ip=%s", s.Domain, page, s.Domain)
+	uri = fmt.Sprintf("https://securitytrails.com/_next/data/%s/list/ip/%s.json?page=%d&ip=%s", s.buildId, s.Domain, page, s.Domain)
 	resp, err := s.httpReq(uri)
 	if err != nil {
 		log.Println("[!] GetIp 1 Error: ", err)

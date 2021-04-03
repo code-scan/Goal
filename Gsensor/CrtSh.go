@@ -37,6 +37,10 @@ func (s *CrtSh) SetType(type_ string) {
 
 func (s *CrtSh) GetResult() Result {
 	s.result = Result{}
+	if s.Type != "subdomain" {
+		return s.result
+	}
+
 	s.http.Get("https://crt.sh/?q=" + s.Domain)
 	s.http.Execute()
 	ret, err := s.http.Text()
@@ -45,7 +49,6 @@ func (s *CrtSh) GetResult() Result {
 		return s.result
 	}
 	reg := regexp.MustCompile(`<TD>(.*?)</TD>`)
-	log.Println(reg.Find([]byte(ret)))
 	r := reg.FindAllString(ret, -1)
 	for _, v := range r {
 		if strings.Contains(v, s.Domain) {

@@ -67,8 +67,7 @@ func (s *Bufferover) GetResult() Result {
 		if len(kv) < 2 {
 			continue
 		}
-		log.Println(kv)
-		result[kv[0]] = kv[1]
+		result[kv[1]] = kv[0]
 	}
 	s.result = result
 	return result

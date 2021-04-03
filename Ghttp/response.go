@@ -3,6 +3,7 @@ package Ghttp
 import (
 	"io"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -25,6 +26,12 @@ func (h *Http) Text() (string, error) {
 	var err error
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
+	} else {
+		return "", err
+	}
+	if err != nil {
+		log.Println("[!]Text Error: ", err)
+		return "", err
 	}
 	if h.HttpResponse.Body != nil {
 		defer h.HttpResponse.Body.Close()
@@ -38,6 +45,12 @@ func (h *Http) Byte() ([]byte, error) {
 	var err error
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
+	} else {
+		return result, err
+	}
+	if err != nil {
+		log.Println("[!]Text Error: ", err)
+		return result, err
 	}
 	if h.HttpResponse.Body != nil {
 		defer h.HttpResponse.Body.Close()
