@@ -2,11 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
-      <change afterPath="$PROJECT_DIR$/Gconvert/ip.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Goal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Goal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/Goal" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/Goal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/encode.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/encode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/hash.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/hash.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/ip.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/ip.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/num.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/num.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gconvert/url.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/url.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gfile/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gfile/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/cookie.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/cookie.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/head.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/head.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/header.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/header.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/session.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/session.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gnet/dns.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gnet/dns.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gnet/icmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gnet/icmp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gnet/tcp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gnet/tcp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gproxy/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gproxy/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gproxy/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gproxy/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/Bufferover.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/Bufferover.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/CrtSh.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/CrtSh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/DomainBoom.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/DomainBoom.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/FofaSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/FofaSensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/ISensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/ISensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/ShodanSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/ShodanSensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/ff" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/ff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/ff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/ff.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/ff2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/ff2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/jy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/jy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/convert_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/convert_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/net_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/net_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/proxy_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/proxy_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tmp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tmp.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,35 +72,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gconvert/url.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gconvert/ip.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/convert_test.go">
+        <entry file="file://$PROJECT_DIR$/tests/sensor_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="359">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -107,62 +127,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/http_test.go" />
-        <option value="$PROJECT_DIR$/http/http_test.go" />
-        <option value="$PROJECT_DIR$/http/post.go" />
-        <option value="$PROJECT_DIR$/http/get.go" />
-        <option value="$PROJECT_DIR$/http/head.go" />
-        <option value="$PROJECT_DIR$/http/session.go" />
-        <option value="$PROJECT_DIR$/http/set.go" />
-        <option value="$PROJECT_DIR$/http/cookie.go" />
-        <option value="$PROJECT_DIR$/convert/int.go" />
-        <option value="$PROJECT_DIR$/convert/num.go" />
-        <option value="$PROJECT_DIR$/convert/url.go" />
-        <option value="$PROJECT_DIR$/convert/encode.go" />
-        <option value="$PROJECT_DIR$/http/http.go" />
-        <option value="$PROJECT_DIR$/http/response.go" />
-        <option value="$PROJECT_DIR$/net/icmp.go" />
-        <option value="$PROJECT_DIR$/net/tcp.go" />
-        <option value="$PROJECT_DIR$/tests/net_test.go" />
-        <option value="$PROJECT_DIR$/Gsensor/ISendor.go" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Gsensor/FofaSensor.go" />
-        <option value="$PROJECT_DIR$/Gnet/dns.go" />
-        <option value="$PROJECT_DIR$/Gnet/tcp.go" />
-        <option value="$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" />
-        <option value="$PROJECT_DIR$/Gsensor/ShodanSensor.go" />
-        <option value="$PROJECT_DIR$/Ghttp/post.go" />
-        <option value="$PROJECT_DIR$/Gproxy/Client.go" />
-        <option value="$PROJECT_DIR$/Gproxy/Server.go" />
-        <option value="$PROJECT_DIR$/Gproxy/client.go" />
-        <option value="$PROJECT_DIR$/Gproxy/server.go" />
-        <option value="$PROJECT_DIR$/tests/proxy_test.go" />
-        <option value="$PROJECT_DIR$/Gfile/file.go" />
-        <option value="$PROJECT_DIR$/Gconvert/time.go" />
-        <option value="$PROJECT_DIR$/Gsensor/ISensor.go" />
-        <option value="$PROJECT_DIR$/Gnet/icmp.go" />
-        <option value="$PROJECT_DIR$/Ghttp/http.go" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Ghttp/header.go" />
-        <option value="$PROJECT_DIR$/tests/http_test.go" />
-        <option value="$PROJECT_DIR$/Gconvert/hash.go" />
-        <option value="$PROJECT_DIR$/Gsensor/DomainBoom.go" />
-        <option value="$PROJECT_DIR$/Gsensor/CrtSh.go" />
-        <option value="$PROJECT_DIR$/Gsensor/Bufferover.go" />
-        <option value="$PROJECT_DIR$/Ghttp/response.go" />
-        <option value="$PROJECT_DIR$/cmd/main.go" />
         <option value="$PROJECT_DIR$/tests/sensor_test.go" />
-        <option value="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" />
-        <option value="$PROJECT_DIR$/Gconvert/ip.go" />
-        <option value="$PROJECT_DIR$/tests/convert_test.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="2560" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="30" />
+    <option name="y" value="30" />
+    <option name="width" value="2500" />
+    <option name="height" value="1020" />
   </component>
+  <component name="ProjectId" id="1qkQarDfJbM5647FajXBaFm92od" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -171,36 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
-          <expand>
-            <path>
-              <item name="Goal" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/my/code/golang/Goal" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="Goal" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/my/code/golang/Goal" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Goal" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/my/code/golang/Goal" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="Goal" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/my/code/golang/Goal" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,26 +156,36 @@
             <path>
               <item name="Goal" type="b2602c69:ProjectViewProjectNode" />
               <item name="Goal" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Gsensor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Goal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Goal" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="true" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go" />
@@ -253,47 +208,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestConvert in github.com/code-scan/Goal/tests">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/cmd/main.go" />
-      <package value="github.com/code-scan/Goal" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestConvert in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestSecTrail in github.com/code-scan/Goal/tests">
+    <configuration name="TestConvert in github.com/code-scan/Goal/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestConvert$" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestConvert\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestDomainBoom in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFofa in github.com/code-scan/Goal/tests (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDomainBoom$" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestFofa\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestFofa in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestHttp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestFofa$" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestHttp\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProxy in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestProxy\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -320,99 +277,54 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestConvert in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestSecTrail in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestFofa in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestFofa in github.com/code-scan/Goal/tests (1)" />
+        <item itemvalue="Go Test.TestProxy in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestConvert in github.com/code-scan/Goal/tests (1)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="TestHistory">
-    <history-entry file="TestDomainBoom_in_github_com_code-scan_Goal_tests - 2021.03.31 at 19h 07m 55s.xml">
-      <configuration name="TestDomainBoom in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestFofa_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 48m 00s.xml">
-      <configuration name="TestFofa in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 48m 16s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 48m 43s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 49m 16s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 50m 23s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 57m 42s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.03 at 16h 57m 56s.xml">
-      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.04.04 at 14h 32m 53s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestConvert_in_github_com_code-scan_Goal_tests - 2021.04.04 at 14h 45m 33s.xml">
-      <configuration name="TestConvert in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe" />
+      <created>1617621176914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617621176914</updated>
+    </task>
+    <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TestHistory">
+    <history-entry file="TestSecTrail_in_github_com_code-scan_Goal_tests - 2021.04.07 at 12h 46m 14s.xml">
+      <configuration name="TestSecTrail in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1057" extended-state="6" />
+    <frame x="30" y="30" width="2500" height="1020" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.109213665" />
-      <window_info id="Structure" order="1" sideWeight="0.5007728" side_tool="true" weight="0.20960961" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24979658" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49483716" visible="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49960285" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960285" weight="0.32970297" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4992057" weight="0.32871288" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49642575" weight="0.40207255" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50516284" side_tool="true" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32972974" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20960961" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32953367" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -428,14 +340,6 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
               </option>
             </State>
           </value>
@@ -487,365 +391,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Ghttp/cookie.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/time/format.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="813" column="5" selection-start-line="813" selection-start-column="5" selection-end-line="813" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gconvert/time.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/regexp/regexp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="1115" column="20" selection-start-line="1115" selection-start-column="20" selection-end-line="1115" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/golang.org/x/tools@v0.1.0/go/internal/gcimporter/testdata/b.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/golang.org/x/tools@v0.1.0/go/ssa/interp/testdata/src/strings/strings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/strings/strings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="298" column="5" selection-start-line="298" selection-start-column="5" selection-end-line="298" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/iprawsock.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="216" column="19" lean-forward="true" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/url/url.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1118" column="14" selection-start-line="1118" selection-start-column="14" selection-end-line="1118" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/fmt/print.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="216" column="5" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/transport.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="432" column="5" selection-start-line="432" selection-start-column="5" selection-end-line="432" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/golang.org/x/net@v0.0.0-20210330075724-22f4162a9025/proxy/socks5.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/golang.org/x/net@v0.0.0-20210330075724-22f4162a9025/proxy/proxy.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gproxy/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/head.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/request.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/session.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/post.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gnet/icmp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gnet/dns.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gnet/tcp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/io/io.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="366" column="5" selection-start-line="366" selection-start-column="5" selection-end-line="366" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/response.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/os/file.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="314" column="30" selection-start-line="314" selection-start-column="30" selection-end-line="314" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/os/types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/get.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/header.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gfile/file.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/http_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/crypto/sha1/sha1.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="260" column="5" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/crypto/crypto.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/crypto/sha512/sha512.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4905">
-          <caret line="332" column="35" selection-start-line="332" selection-start-column="33" selection-end-line="332" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gconvert/hash.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="e#18#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/FofaSensor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/ISensor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="260" column="35" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/ShodanSensor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/DomainBoom.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="50" column="11" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/CrtSh.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/Bufferover.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/sensor_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="e#14#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/encoding/json/decode.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/http.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="e#15#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/net/http/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ghttp/response.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gconvert/ip.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gconvert/url.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/convert_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="359">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
         </state>
       </provider>
     </entry>
