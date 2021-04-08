@@ -2,7 +2,6 @@ package Gsensor
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
 	"github.com/code-scan/Goal/Ghttp"
 	"github.com/code-scan/Goal/Gnet"
@@ -185,9 +184,6 @@ func (s *SecurityTrails) GetIp(page int) {
 func (s *SecurityTrails) httpReq(uri string) ([]byte, error) {
 	s.http.New("POST", uri)
 	s.http.SetCookie(s.Cookie)
-	if ret := s.http.Execute(); ret != nil {
-		return s.http.Byte()
-	} else {
-		return []byte(""), errors.New("req fail")
-	}
+	s.http.Execute()
+	return s.http.Byte()
 }

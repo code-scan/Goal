@@ -50,10 +50,7 @@ func (s *Bufferover) SetType(type_ string) {
 func (s *Bufferover) GetResult() Result {
 	result := Result{}
 	s.http.Get("https://dns.bufferover.run/dns?q=." + s.Domain)
-	if ret := s.http.Execute(); ret == nil {
-		log.Println("[!]GetResult Error: Execute", s.GetInfo())
-		return result
-	}
+	s.http.Execute()
 	ret, err := s.http.Byte()
 	if err != nil {
 		log.Println("[!]GetResult Error: ", err, s.GetInfo())

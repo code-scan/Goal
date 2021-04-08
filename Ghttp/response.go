@@ -15,6 +15,7 @@ func (h *Http) Execute() *http.Response {
 	h.HttpClient.Transport = &h.HttpTransport
 	h.HttpResponse, err = h.HttpClient.Do(h.HttpRequest)
 	if err != nil {
+		h.HttpResponse = &http.Response{}
 		return &http.Response{}
 	}
 	return h.HttpResponse
@@ -25,6 +26,7 @@ func (h *Http) Text() (string, error) {
 	var result []byte
 	var err error
 	if h.HttpResponse.Close {
+		log.Println("[!] HttpResponse Is Closed")
 		return "", err
 	}
 	if h.HttpResponse != nil {
@@ -47,6 +49,7 @@ func (h *Http) Byte() ([]byte, error) {
 	var result []byte
 	var err error
 	if h.HttpResponse.Close {
+		log.Println("[!] HttpResponse Is Closed")
 		return result, err
 	}
 	if h.HttpResponse != nil {
@@ -66,6 +69,7 @@ func (h *Http) Byte() ([]byte, error) {
 func (h *Http) SaveToFile(file string) (bool, error) {
 	var err error
 	if h.HttpResponse.Close {
+		log.Println("[!] HttpResponse Is Closed")
 		return false, err
 	}
 	var f *os.File
