@@ -26,10 +26,6 @@ func (h *Http) Execute() *http.Response {
 func (h *Http) Text() (string, error) {
 	var result []byte
 	var err error
-	if h.HttpResponse.Close {
-		log.Println("[!] HttpResponse Is Closed")
-		return "", err
-	}
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	} else {
@@ -49,13 +45,10 @@ func (h *Http) Text() (string, error) {
 func (h *Http) Byte() ([]byte, error) {
 	var result []byte
 	var err error
-	if h.HttpResponse.Close {
-		log.Println("[!] HttpResponse Is Closed")
-		return result, err
-	}
 	if h.HttpResponse != nil {
 		result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	} else {
+		log.Println("[!] HttpResponse Is Closed")
 		return result, err
 	}
 	if err != nil {
@@ -69,7 +62,7 @@ func (h *Http) Byte() ([]byte, error) {
 }
 func (h *Http) SaveToFile(file string) (bool, error) {
 	var err error
-	if h.HttpResponse.Close {
+	if h.HttpResponse == nil {
 		log.Println("[!] HttpResponse Is Closed")
 		return false, err
 	}
