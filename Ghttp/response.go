@@ -29,6 +29,9 @@ func (h *Http) Text() (string, error) {
 	if h.HttpResponse == nil {
 		return "", err
 	}
+	if h.HttpResponse.Body == nil {
+		return "", err
+	}
 	result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	if err != nil {
 		log.Println("[!]Text Error: ", err)
@@ -43,6 +46,9 @@ func (h *Http) Byte() ([]byte, error) {
 	var result []byte
 	var err error
 	if h.HttpResponse == nil {
+		return result, err
+	}
+	if h.HttpResponse.Body == nil {
 		return result, err
 	}
 	result, err = ioutil.ReadAll(h.HttpResponse.Body)
