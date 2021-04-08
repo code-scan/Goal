@@ -2,6 +2,7 @@ package Gsensor
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"github.com/code-scan/Goal/Ghttp"
 	"github.com/code-scan/Goal/Gnet"
@@ -51,12 +52,20 @@ func (s *SecurityTrails) GetResult() Result {
 	}
 	return s.result
 }
-
+func (s *SecurityTrails) CheckLogin() bool {
+	s.http.New("GET", "https://securitytrails.com/app/account")
+	s.http.Execute()
+	ret, _ := s.http.Text()
+	return strings.Contains(ret, s.UserName)
+}
 func (s *SecurityTrails) Login(ReLogin bool) bool {
 	s.MaxPage = 100
 	s.http = Ghttp.Http{}
 	if ReLogin == false {
 		s.http.SetCookie(s.Cookie)
+		return true
+	}
+	if s.CheckLogin() {
 		return true
 	}
 	postData := make(map[string]interface{})
@@ -176,6 +185,9 @@ func (s *SecurityTrails) GetIp(page int) {
 func (s *SecurityTrails) httpReq(uri string) ([]byte, error) {
 	s.http.New("POST", uri)
 	s.http.SetCookie(s.Cookie)
-	s.http.Execute()
-	return s.http.Byte()
+	if ret := s.http.Execute(); ret != nil {
+		return s.http.Byte()
+	} else {
+		return []byte(""), errors.New("req fail")
+	}
 }

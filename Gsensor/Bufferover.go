@@ -50,16 +50,19 @@ func (s *Bufferover) SetType(type_ string) {
 func (s *Bufferover) GetResult() Result {
 	result := Result{}
 	s.http.Get("https://dns.bufferover.run/dns?q=." + s.Domain)
-	s.http.Execute()
+	if ret := s.http.Execute(); ret == nil {
+		log.Println("[!]GetResult Error: Execute", s.GetInfo())
+		return result
+	}
 	ret, err := s.http.Byte()
 	if err != nil {
-		log.Println("[!]GetResult Error: ", err)
+		log.Println("[!]GetResult Error: ", err, s.GetInfo())
 		return result
 	}
 	var buff BufferoverResult
 	err = json.Unmarshal(ret, &buff)
 	if err != nil {
-		log.Println("[!]GetResult 2 Error: ", err)
+		log.Println("[!]GetResult 2 Error: ", err, s.GetInfo())
 		return result
 	}
 	for _, v := range buff.FdnsA {

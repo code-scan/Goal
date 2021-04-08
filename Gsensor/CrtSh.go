@@ -42,7 +42,10 @@ func (s *CrtSh) GetResult() Result {
 	}
 
 	s.http.Get("https://crt.sh/?q=" + s.Domain)
-	s.http.Execute()
+	if ret := s.http.Execute(); ret == nil {
+		log.Println("[!]GetResult Error: Execute", s.GetInfo())
+		return s.result
+	}
 	ret, err := s.http.Text()
 	if err != nil {
 		log.Println("[!] GetResult Error: ", err)
