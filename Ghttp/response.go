@@ -26,18 +26,15 @@ func (h *Http) Execute() *http.Response {
 func (h *Http) Text() (string, error) {
 	var result []byte
 	var err error
-	if h.HttpResponse != nil {
-		result, err = ioutil.ReadAll(h.HttpResponse.Body)
-	} else {
+	if h.HttpResponse == nil {
 		return "", err
 	}
+	result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	if err != nil {
 		log.Println("[!]Text Error: ", err)
 		return "", err
 	}
-	if h.HttpResponse.Body != nil {
-		defer h.HttpResponse.Body.Close()
-	}
+	defer h.HttpResponse.Body.Close()
 	return string(result), err
 }
 
@@ -45,19 +42,15 @@ func (h *Http) Text() (string, error) {
 func (h *Http) Byte() ([]byte, error) {
 	var result []byte
 	var err error
-	if h.HttpResponse != nil {
-		result, err = ioutil.ReadAll(h.HttpResponse.Body)
-	} else {
-		log.Println("[!] HttpResponse Is Closed")
+	if h.HttpResponse == nil {
 		return result, err
 	}
+	result, err = ioutil.ReadAll(h.HttpResponse.Body)
 	if err != nil {
 		log.Println("[!]Text Error: ", err)
 		return result, err
 	}
-	if h.HttpResponse.Body != nil {
-		defer h.HttpResponse.Body.Close()
-	}
+	defer h.HttpResponse.Body.Close()
 	return result, err
 }
 func (h *Http) SaveToFile(file string) (bool, error) {
