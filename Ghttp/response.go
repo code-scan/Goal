@@ -15,8 +15,9 @@ func (h *Http) Execute() *http.Response {
 	h.HttpClient.Transport = &h.HttpTransport
 	h.HttpResponse, err = h.HttpClient.Do(h.HttpRequest)
 	if err != nil {
-		h.HttpResponse = &http.Response{}
-		return &http.Response{}
+		log.Println("[!] Http Execute Error : ", err)
+		h.HttpResponse = nil
+		return nil
 	}
 	return h.HttpResponse
 }
