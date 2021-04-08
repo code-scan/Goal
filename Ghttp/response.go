@@ -87,6 +87,9 @@ func (h Http) StatusCode() int {
 	return -1
 }
 func (h *Http) RespCookie() string {
+	if h.HttpResponse == nil || h.HttpResponse.Header == nil {
+		return ""
+	}
 	cookies := h.HttpResponse.Header.Values("set-cookie")
 	cks := strings.Join(cookies, "; ")
 	return cks

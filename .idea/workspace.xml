@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ghttp/response.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="392">
+              <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
               <folding>
                 <element signature="e#15#80#0" expanded="true" />
               </folding>
@@ -61,15 +61,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="371">
               <caret line="736" column="18" selection-start-line="736" selection-start-column="18" selection-end-line="736" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/net/http/response.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="71" column="22" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -545,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/go/src/net/http/client.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="736" column="18" selection-start-line="736" selection-start-column="18" selection-end-line="736" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -568,15 +552,22 @@
     </entry>
     <entry file="file:///usr/local/go/src/net/http/response.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="71" column="22" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="22" />
+        <state relative-caret-position="190">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/net/http/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="736" column="18" selection-start-line="736" selection-start-column="18" selection-end-line="736" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ghttp/response.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="392">
+          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
           <folding>
             <element signature="e#15#80#0" expanded="true" />
           </folding>
