@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ghttp/response.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            <state relative-caret-position="472">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
               <folding>
                 <element signature="e#15#80#0" expanded="true" />
               </folding>
@@ -566,8 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ghttp/response.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        <state relative-caret-position="472">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
           <folding>
             <element signature="e#15#80#0" expanded="true" />
           </folding>

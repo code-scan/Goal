@@ -26,6 +26,11 @@ func (h *Http) Execute() *http.Response {
 func (h *Http) Text() (string, error) {
 	var result []byte
 	var err error
+	defer func() {
+		if r := recover(); r != nil {
+			log.Println("Recovered in Text : ", r)
+		}
+	}()
 	if h.HttpResponse == nil {
 		return "", err
 	}
@@ -45,6 +50,11 @@ func (h *Http) Text() (string, error) {
 func (h *Http) Byte() ([]byte, error) {
 	var result []byte
 	var err error
+	defer func() {
+		if r := recover(); r != nil {
+			log.Println("Recovered in Byte : ", r)
+		}
+	}()
 	if h.HttpResponse == nil {
 		return result, err
 	}
@@ -61,6 +71,11 @@ func (h *Http) Byte() ([]byte, error) {
 }
 func (h *Http) SaveToFile(file string) (bool, error) {
 	var err error
+	defer func() {
+		if r := recover(); r != nil {
+			log.Println("Recovered in SaveToFile : ", r)
+		}
+	}()
 	if h.HttpResponse == nil {
 		log.Println("[!] HttpResponse Is Closed")
 		return false, err
@@ -87,6 +102,11 @@ func (h Http) StatusCode() int {
 	return -1
 }
 func (h *Http) RespCookie() string {
+	defer func() {
+		if r := recover(); r != nil {
+			log.Println("Recovered in RespCookie : ", r)
+		}
+	}()
 	if h.HttpResponse == nil || h.HttpResponse.Header == nil {
 		return ""
 	}
