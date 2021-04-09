@@ -43,6 +43,7 @@ func (s *Fofa) SetPassword(password string) {
 	s.PassWord = password
 }
 func (s *Fofa) GetResult() Result {
+	s.result = Result{}
 	switch s.Type {
 	case "subdomain":
 		s.GetSubDomain(1)

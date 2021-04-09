@@ -41,6 +41,7 @@ func (s *SecurityTrails) SetPassword(password string) {
 	s.PassWord = password
 }
 func (s *SecurityTrails) GetResult() Result {
+	s.result = Result{}
 	switch s.Type {
 	case "subdomain":
 		s.GetSubDomain(1)

@@ -57,7 +57,6 @@ func (s *Shodan) SetPassword(password string) {
 	s.PassWord = password
 }
 func (s *Shodan) GetResult() Result {
-
 	var result = Result{}
 	if s.Type != "ports" {
 		return result

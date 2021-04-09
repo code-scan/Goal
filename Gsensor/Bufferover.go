@@ -49,6 +49,9 @@ func (s *Bufferover) SetType(type_ string) {
 
 func (s *Bufferover) GetResult() Result {
 	result := Result{}
+	if s.Type != "subdomain" {
+		return result
+	}
 	s.http.Get("https://dns.bufferover.run/dns?q=." + s.Domain)
 	s.http.Execute()
 	ret, err := s.http.Byte()
