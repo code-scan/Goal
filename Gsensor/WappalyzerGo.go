@@ -48,7 +48,8 @@ func (s *WappalyzerGo) GetResult() Result {
 	}
 	resp, err := http.DefaultClient.Get(s.Domain)
 	if err != nil {
-		log.Fatal(err)
+		log.Println("[!] GetResult Error : ", s.GetInfo(), err)
+		return r
 	}
 	data, _ := ioutil.ReadAll(resp.Body) // Ignoring error for example
 

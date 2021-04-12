@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
-      <change afterPath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/jy.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/tests/sensor_test.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="75" column="21" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="21" />
+              <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
               <folding>
                 <element signature="e#14#79#0" expanded="true" />
               </folding>
@@ -46,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+            <state relative-caret-position="297">
+              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
               <folding>
                 <element signature="e#17#158#0" expanded="true" />
               </folding>
@@ -334,9 +329,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCrt_in_github_com_code-scan_Goal_tests - 2021.04.12 at 09h 32m 04s.xml">
-      <configuration name="TestCrt in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestBuff_in_github_com_code-scan_Goal_tests - 2021.04.12 at 09h 32m 27s.xml">
       <configuration name="TestBuff in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -364,6 +356,9 @@
     <history-entry file="TestWapp_in_github_com_code-scan_Goal_tests - 2021.04.12 at 09h 47m 41s.xml">
       <configuration name="TestWapp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestWapp_in_github_com_code-scan_Goal_tests - 2021.04.12 at 09h 48m 26s.xml">
+      <configuration name="TestWapp in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="30" width="2500" height="1020" extended-state="0" />
@@ -374,7 +369,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297414" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,7 +377,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32435346" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32435346" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -599,7 +594,7 @@
     <entry file="file://$PROJECT_DIR$/tests/sensor_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
-          <caret line="75" column="21" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="21" />
+          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
           <folding>
             <element signature="e#14#79#0" expanded="true" />
           </folding>
@@ -608,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        <state relative-caret-position="297">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
           <folding>
             <element signature="e#17#158#0" expanded="true" />
           </folding>
