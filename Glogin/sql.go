@@ -6,6 +6,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mssql"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	"log"
 	"strings"
 )
 
@@ -86,7 +87,12 @@ func SqlQuery(host, port, username, password, type_, sql string) []interface{} {
 		for i, colName := range colums {
 			val := columnPointers[i].(*interface{})
 			m[colName] = *val
+			//等价
+			//val = columns[i]
+			//m[colName] = val
 		}
+		}
+		log.Println([1])
 
 		//log.Println(m)
 		result = append(result, m)

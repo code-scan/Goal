@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
-      <change afterPath="$PROJECT_DIR$/Glogin/sql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/login_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/login_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glogin/sql.go" beforeDir="false" afterPath="$PROJECT_DIR$/Glogin/sql.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Glogin/sql.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+            <state relative-caret-position="554">
+              <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -78,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/go/src/database/sql/convert.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="551" column="59" selection-start-line="551" selection-start-column="59" selection-end-line="551" selection-end-column="59" />
+            <state relative-caret-position="350">
+              <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -154,8 +150,8 @@
         <option value="$PROJECT_DIR$/tests/glogin.go" />
         <option value="$PROJECT_DIR$/Glogin/pop3.go" />
         <option value="$PROJECT_DIR$/Glogin/smtp.go" />
-        <option value="$PROJECT_DIR$/Glogin/sql.go" />
         <option value="$PROJECT_DIR$/tests/login_test.go" />
+        <option value="$PROJECT_DIR$/Glogin/sql.go" />
       </list>
     </option>
   </component>
@@ -324,12 +320,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 26m 30s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 28m 24s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 28m 43s.xml">
       <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -352,6 +342,12 @@
       <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 35m 51s.xml">
+      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.19 at 10h 49m 10s.xml">
+      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.19 at 10h 49m 37s.xml">
       <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -708,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/jinzhu/gorm@v1.9.16/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="493" column="13" selection-start-line="493" selection-start-column="13" selection-end-line="493" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/go/pkg/mod/github.com/taknb2nch/go-pop3@v0.0.0-20140407022049-72f6fae12d45/pop3proto.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -739,20 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/login_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Glogin/sql.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="82" column="16" lean-forward="true" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/database/sql/sql.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -762,8 +737,29 @@
     </entry>
     <entry file="file:///usr/local/go/src/database/sql/convert.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="551" column="59" selection-start-line="551" selection-start-column="59" selection-end-line="551" selection-end-column="59" />
+        <state relative-caret-position="350">
+          <caret line="535" column="5" lean-forward="true" selection-start-line="535" selection-start-column="5" selection-end-line="535" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/jinzhu/gorm@v1.9.16/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="498" column="13" selection-start-line="498" selection-start-column="13" selection-end-line="498" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/login_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Glogin/sql.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="94" column="24" lean-forward="true" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
         </state>
       </provider>
     </entry>
