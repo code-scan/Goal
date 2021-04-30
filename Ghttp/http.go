@@ -20,7 +20,7 @@ type Http struct {
 	HttpRequestType string         // 请求方法，GET/POST
 	HttpContentType string         // 请求类型 json/form-url-encoide
 	HttpBody        io.Reader      // 返回内容
-	HttpTransport   http.Transport
+	HttpTransport   *http.Transport
 	Cookie          *cookiejar.Jar //cookie的值
 	isSession       bool           //是否创建session
 }
@@ -30,6 +30,17 @@ type Http struct {
 //func init() {
 //	HttpClient = Http{}
 //}
+var transport http.Transport
+
+func init() {
+	transport = http.Transport{
+		DisableKeepAlives: true,
+		TLSClientConfig: &tls.Config{
+			InsecureSkipVerify: true,
+		},
+	}
+	log.Println("init http")
+}
 
 // 新建一个请求
 func (h *Http) New(method, urls string) error {
@@ -42,6 +53,9 @@ func (h *Http) New(method, urls string) error {
 			h.Cookie, _ = cookiejar.New(nil)
 		}
 		h.HttpClient.Jar = h.Cookie
+	}
+	if h.HttpTransport == nil {
+		h.HttpTransport = &http.Transport{}
 	}
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	return err

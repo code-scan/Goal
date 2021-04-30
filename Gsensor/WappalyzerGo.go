@@ -6,7 +6,6 @@ import (
 	wappalyzer "github.com/projectdiscovery/wappalyzergo"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"strings"
 )
 
@@ -15,7 +14,7 @@ type WappalyzerGo struct {
 	UserName string
 	PassWord string
 	Type     string
-	http     Ghttp.Http
+	Http     Ghttp.Http
 }
 
 func (s *WappalyzerGo) GetInfo() string {
@@ -46,14 +45,23 @@ func (s *WappalyzerGo) GetResult() Result {
 	if s.Type != "finger" {
 		return r
 	}
-	resp, err := http.DefaultClient.Get(s.Domain)
-	if err != nil {
-		log.Println("[!] GetResult Error : ", s.GetInfo(), err)
+	//resp, err := http.DefaultClient.Get(s.Domain)
+	s.Http.New("GET", s.Domain)
+	resp := s.Http.Execute()
+	if resp == nil {
+		log.Println("resp nil")
 		return r
 	}
-	data, _ := ioutil.ReadAll(resp.Body) // Ignoring error for example
-
+	data, err := ioutil.ReadAll(resp.Body) // Ignoring error for example
+	if err != nil {
+		log.Println(err)
+		return r
+	}
 	wappalyzerClient, err := wappalyzer.New()
+	if err != nil {
+		log.Println(err)
+		return r
+	}
 	fingerprints := wappalyzerClient.Fingerprint(resp.Header, data)
 	for k := range fingerprints {
 		r[k] = ""

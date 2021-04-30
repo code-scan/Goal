@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gfile/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gfile/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ghttp/header.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/header.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Glogin/sql.go" beforeDir="false" afterPath="$PROJECT_DIR$/Glogin/sql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tmp.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tmp.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,19 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestWapp in github.com/code-scan/Goal/tests">
+  <component name="RunManager" selected="Go Test.TestWebapp in github.com/code-scan/Goal/tests">
+    <configuration name="TestDomainBoom in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestDomainBoom\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestHttp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -119,17 +128,6 @@
       <pattern value="^\QTestHttp\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestPop3 in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <framework value="gotest" />
-      <pattern value="^TestPop3$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestSQL in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -139,17 +137,6 @@
       <filePath value="$PROJECT_DIR$/" />
       <framework value="gotest" />
       <pattern value="^TestSQL$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSmtp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <framework value="gotest" />
-      <pattern value="^TestSmtp$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -175,13 +162,25 @@
       <pattern value="^\QTestWapp\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestWebapp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestWebapp\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestWebapp in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestWapp in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestSQL in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestPop3 in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestSmtp in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>
