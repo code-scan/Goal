@@ -57,6 +57,7 @@ func (h *Http) New(method, urls string) error {
 	if h.HttpTransport == nil {
 		h.HttpTransport = &http.Transport{}
 	}
+	h.SetTimeOut(30)
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	return err
 
