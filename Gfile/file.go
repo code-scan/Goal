@@ -1,9 +1,13 @@
 package Gfile
 
 import (
+	"archive/zip"
+	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"os"
+	"path"
 )
 
 func ReadFileToString(path string) string {

@@ -11,6 +11,11 @@ import (
 
 //发送请求
 func (h *Http) Execute() *http.Response {
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println(err)
+		}
+	}()
 	var err error
 	h.HttpClient.Transport = &h.HttpTransport
 	h.HttpResponse, err = h.HttpClient.Do(h.HttpRequest)
@@ -96,6 +101,11 @@ func (h *Http) SaveToFile(file string) (bool, error) {
 
 // statuscode
 func (h Http) StatusCode() int {
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println(err)
+		}
+	}()
 	if h.HttpResponse != nil {
 		return h.HttpResponse.StatusCode
 	}

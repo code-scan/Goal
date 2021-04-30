@@ -5,6 +5,11 @@ import (
 )
 
 func (h *Http) SetHeader(key string, value string) {
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println(err)
+		}
+	}()
 	if h.HttpRequest == nil {
 		log.Println("[!]HttpRequest Is not Init")
 		return
