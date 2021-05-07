@@ -234,7 +234,7 @@ type SubDomainRespsonse struct {
 		Locationsearch   string `json:"locationSearch"`
 		Page             int    `json:"page"`
 		Searchvalue      string `json:"searchValue"`
-		Subdomainscount  int    `json:"subdomainsCount"`
+		Subdomainscount  interface{}    `json:"subdomainsCount"`
 		User             struct {
 			Email      string `json:"email"`
 			Isverified bool   `json:"isVerified"`

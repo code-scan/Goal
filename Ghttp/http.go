@@ -58,6 +58,7 @@ func (h *Http) New(method, urls string) error {
 		h.HttpTransport = &http.Transport{}
 	}
 	h.SetTimeOut(30)
+	h.IgnoreSSL()
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	return err
 
@@ -80,7 +81,7 @@ func (h *Http) SetTimeOut(t int) {
 	h.HttpTransport.ResponseHeaderTimeout = td * time.Second
 	h.HttpTransport.IdleConnTimeout = td * time.Second
 	h.HttpTransport.ExpectContinueTimeout = td * time.Second
-
+	h.HttpTransport.DisableKeepAlives = true
 }
 func (h *Http) IgnoreSSL() {
 	h.HttpTransport.TLSClientConfig = &tls.Config{
