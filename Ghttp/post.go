@@ -3,6 +3,7 @@ package Ghttp
 import (
 	"bytes"
 	"encoding/json"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/url"
@@ -54,5 +55,30 @@ func (h *Http) SetPostString(values string) {
 func (h *Http) setParams() {
 	if h.HttpRequest != nil && h.HttpBody != nil {
 		h.HttpRequest.Body = ioutil.NopCloser(h.HttpBody)
+		switch v := h.HttpBody.(type) {
+		case *bytes.Buffer:
+			h.HttpRequest.ContentLength = int64(v.Len())
+			buf := v.Bytes()
+			h.HttpRequest.GetBody = func() (io.ReadCloser, error) {
+				r := bytes.NewReader(buf)
+				return io.NopCloser(r), nil
+			}
+		case *bytes.Reader:
+			h.HttpRequest.ContentLength = int64(v.Len())
+			snapshot := *v
+			h.HttpRequest.GetBody = func() (io.ReadCloser, error) {
+				r := snapshot
+				return io.NopCloser(&r), nil
+			}
+		case *strings.Reader:
+			h.HttpRequest.ContentLength = int64(v.Len())
+			snapshot := *v
+			h.HttpRequest.GetBody = func() (io.ReadCloser, error) {
+				r := snapshot
+				return io.NopCloser(&r), nil
+			}
+		default:
+
+		}
 	}
 }
