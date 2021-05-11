@@ -39,7 +39,7 @@ func init() {
 			InsecureSkipVerify: true,
 		},
 	}
-	log.Println("init http")
+	//log.Println("init http")
 }
 
 // 新建一个请求

@@ -1,7 +1,6 @@
 package Ghttp
 
 import (
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -18,7 +17,7 @@ func (h *Http) Execute() *http.Response {
 		}
 	}()
 
-	fmt.Printf("HttpTransport: %p \n", h.HttpTransport)
+	//fmt.Printf("HttpTransport: %p \n", h.HttpTransport)
 	var err error
 	h.HttpClient.Transport = h.HttpTransport
 	h.HttpResponse, err = h.HttpClient.Do(h.HttpRequest)
