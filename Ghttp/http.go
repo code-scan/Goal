@@ -93,10 +93,10 @@ func (h *Http) SetProxy(proxyUrl string) {
 	u, _ := url.Parse(proxyUrl)
 	switch u.Scheme {
 	case "https":
-		log.Println("use proxy", u.Scheme)
+		//log.Println("use proxy", u.Scheme)
 		h.HttpTransport.Proxy = http.ProxyURL(u)
 	case "http":
-		log.Println("use proxy", u.Scheme)
+		//log.Println("use proxy", u.Scheme)
 		h.HttpTransport.Proxy = http.ProxyURL(u)
 	case "socks5":
 		pwd, _ := u.User.Password()
