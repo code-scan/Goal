@@ -36,8 +36,18 @@ func (h *Http) Close() {
 			log.Println(err)
 		}
 	}()
-	h.HttpResponse.Body.Close()
+	if h.HttpResponse != nil {
+		h.HttpResponse.Body.Close()
+	}
 
+}
+
+//获取返回头
+func (h *Http) GetRespHead(key string) string {
+	if h.HttpResponse != nil {
+		return h.HttpResponse.Header.Get(key)
+	}
+	return ""
 }
 
 // string的返回值
