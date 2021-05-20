@@ -1,6 +1,7 @@
 package Ghttp
 
 import (
+	"context"
 	"crypto/tls"
 	"golang.org/x/net/proxy"
 	"io"
@@ -23,6 +24,8 @@ type Http struct {
 	HttpTransport   *http.Transport
 	Cookie          *cookiejar.Jar //cookie的值
 	isSession       bool           //是否创建session
+	Ctx             context.Context
+	CtxCancel       context.CancelFunc
 }
 
 //var HttpClient Http
@@ -33,6 +36,7 @@ type Http struct {
 var transport http.Transport
 
 func init() {
+
 	transport = http.Transport{
 		//DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
@@ -45,6 +49,7 @@ func init() {
 // 新建一个请求
 func (h *Http) New(method, urls string) error {
 	var err error
+	h.Ctx, h.CtxCancel = context.WithCancel(context.Background())
 	h.HttpRequestUrl = urls
 	h.HttpRequestType = method
 	// 初始化http client 如果开启了session，则传入cookie jar
@@ -61,6 +66,7 @@ func (h *Http) New(method, urls string) error {
 	h.SetTimeOut(30)
 	h.IgnoreSSL()
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
+	h.HttpRequest.WithContext(h.Ctx)
 	return err
 
 	//if h.HttpRequest == nil {

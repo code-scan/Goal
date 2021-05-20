@@ -39,6 +39,9 @@ func (h *Http) Close() {
 	if h.HttpResponse != nil {
 		h.HttpResponse.Body.Close()
 	}
+	if h.CtxCancel != nil {
+		h.CtxCancel()
+	}
 
 }
 
