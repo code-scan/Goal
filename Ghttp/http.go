@@ -66,7 +66,7 @@ func init() {
 	transport = http.Transport{
 		//Dial:    dialTimeout,
 		//DialTLS: TLSdialTimeout,
-		DisableKeepAlives: true,
+		//DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
 		},
