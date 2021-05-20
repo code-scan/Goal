@@ -41,6 +41,7 @@ func dialTimeout(network, addr string) (net.Conn, error) {
 		return conn, err
 	}
 	tcp_conn := conn.(*net.TCPConn)
+	tcp_conn.SetDeadline(time.Now().Add(30 * time.Second))
 	//tcp_conn.SetKeepAlive(false)
 
 	return tcp_conn, err
@@ -50,11 +51,11 @@ func TLSdialTimeout(network, addr string) (net.Conn, error) {
 		InsecureSkipVerify: true,
 		NextProtos:         []string{"foo"},
 	})
-	tc.SetDeadline(time.Now().Add(30 * time.Second))
 	//tc.SetReadDeadline(30 * time.Second)
 	if err != nil {
 		return nil, err
 	}
+	tc.SetDeadline(time.Now().Add(30 * time.Second))
 	if err := tc.Handshake(); err != nil {
 		return nil, err
 	}
