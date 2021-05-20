@@ -64,9 +64,9 @@ func TLSdialTimeout(network, addr string) (net.Conn, error) {
 func init() {
 
 	transport = http.Transport{
-		Dial:    dialTimeout,
-		DialTLS: TLSdialTimeout,
-		//DisableKeepAlives: true,
+		//Dial:    dialTimeout,
+		//DialTLS: TLSdialTimeout,
+		DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
 		},
