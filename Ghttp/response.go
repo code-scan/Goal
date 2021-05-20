@@ -29,6 +29,17 @@ func (h *Http) Execute() *http.Response {
 	return h.HttpResponse
 }
 
+// 关闭请求与body
+func (h *Http) Close() {
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println(err)
+		}
+	}()
+	h.HttpResponse.Body.Close()
+
+}
+
 // string的返回值
 func (h *Http) Text() (string, error) {
 	var result []byte
