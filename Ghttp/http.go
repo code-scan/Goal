@@ -124,3 +124,9 @@ func (h *Http) SetSocksProxy(proxyUrl string, auth *proxy.Auth) {
 		h.HttpTransport.DialContext = contextDialer.DialContext
 	}
 }
+
+func (h *Http) DontRedirect() {
+	h.HttpClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+		return http.ErrUseLastResponse
+	}
+}
