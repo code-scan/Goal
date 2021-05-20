@@ -34,7 +34,7 @@ var transport http.Transport
 
 func init() {
 	transport = http.Transport{
-		DisableKeepAlives: true,
+		//DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
 		},
@@ -55,7 +55,8 @@ func (h *Http) New(method, urls string) error {
 		h.HttpClient.Jar = h.Cookie
 	}
 	if h.HttpTransport == nil {
-		h.HttpTransport = &http.Transport{}
+		//log.Println("new transport")
+		h.HttpTransport = &transport
 	}
 	h.SetTimeOut(30)
 	h.IgnoreSSL()
@@ -81,7 +82,7 @@ func (h *Http) SetTimeOut(t int) {
 	h.HttpTransport.ResponseHeaderTimeout = td * time.Second
 	h.HttpTransport.IdleConnTimeout = td * time.Second
 	h.HttpTransport.ExpectContinueTimeout = td * time.Second
-	h.HttpTransport.DisableKeepAlives = true
+	//h.HttpTransport.DisableKeepAlives = true
 }
 func (h *Http) IgnoreSSL() {
 	h.HttpTransport.TLSClientConfig = &tls.Config{
@@ -129,4 +130,7 @@ func (h *Http) DontRedirect() {
 	h.HttpClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
 		return http.ErrUseLastResponse
 	}
+}
+func (h *Http) DontKeepAlive() {
+	h.HttpTransport.DisableKeepAlives = true
 }
