@@ -35,9 +35,36 @@ type Http struct {
 //}
 var transport http.Transport
 
+func dialTimeout(network, addr string) (net.Conn, error) {
+	conn, err := net.DialTimeout(network, addr, time.Second*30)
+	if err != nil {
+		return conn, err
+	}
+	tcp_conn := conn.(*net.TCPConn)
+	//tcp_conn.SetKeepAlive(false)
+
+	return tcp_conn, err
+}
+func TLSdialTimeout(network, addr string) (net.Conn, error) {
+	tc, err := tls.Dial("tcp", addr, &tls.Config{
+		InsecureSkipVerify: true,
+		NextProtos:         []string{"foo"},
+	})
+	tc.SetDeadline(time.Now().Add(30 * time.Second))
+	//tc.SetReadDeadline(30 * time.Second)
+	if err != nil {
+		return nil, err
+	}
+	if err := tc.Handshake(); err != nil {
+		return nil, err
+	}
+	return tc, nil
+}
 func init() {
 
 	transport = http.Transport{
+		Dial:    dialTimeout,
+		DialTLS: TLSdialTimeout,
 		//DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
