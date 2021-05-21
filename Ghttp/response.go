@@ -38,7 +38,7 @@ func (h *Http) Close() {
 		}
 	}()
 	if h.HttpResponse != nil {
-		h.HttpResponse.Body.Close()
+		//h.HttpResponse.Body.Close()
 		//log.Println("CLose(): ", h.HttpResponse.Body)
 		h.readAll()
 	}
@@ -57,10 +57,12 @@ func (h *Http) GetRespHead(key string) string {
 }
 
 func (h *Http) readAll() ([]byte, error) {
+	//获取一个新的，如果不存在则会调用new创建
 	buffer := pool.Get().(*bytes.Buffer)
 	buffer.Reset()
 	defer func() {
 		if buffer != nil {
+			//重新放回去
 			pool.Put(buffer)
 			buffer = nil
 		}
@@ -73,8 +75,8 @@ func (h *Http) readAll() ([]byte, error) {
 	}
 	_, err := io.Copy(buffer, h.HttpResponse.Body)
 	if err != nil && err != io.EOF {
-		//log.Printf("adapter io.copy failure error:%v \n", err)
-		return nil, fmt.Errorf("adapter io.copy failure error:%v", err)
+		//log.Printf("readAll io.copy failure error:%v \n", err)
+		return nil, fmt.Errorf("readAll io.copy failure error:%v", err)
 	}
 	defer h.HttpResponse.Body.Close()
 	return buffer.Bytes(), nil
