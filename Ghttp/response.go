@@ -57,11 +57,11 @@ func (h *Http) GetRespHead(key string) string {
 }
 
 func (h *Http) readAll() ([]byte, error) {
-	buffer := h.Pool.Get().(*bytes.Buffer)
+	buffer := pool.Get().(*bytes.Buffer)
 	buffer.Reset()
 	defer func() {
 		if buffer != nil {
-			h.Pool.Put(buffer)
+			pool.Put(buffer)
 			buffer = nil
 		}
 	}()

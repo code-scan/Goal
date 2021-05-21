@@ -28,7 +28,7 @@ type Http struct {
 	isSession       bool           //是否创建session
 	Ctx             context.Context
 	CtxCancel       context.CancelFunc
-	Pool            *sync.Pool
+	//Pool            *sync.Pool
 }
 
 //var HttpClient Http
@@ -37,6 +37,7 @@ type Http struct {
 //	HttpClient = Http{}
 //}
 var transport http.Transport
+var pool sync.Pool
 
 func init() {
 
@@ -48,19 +49,17 @@ func init() {
 		},
 	}
 
+	pool = sync.Pool{
+		New: func() interface{} {
+			return bytes.NewBuffer(make([]byte, 4096))
+		},
+	}
+
 	//log.Println("init http")
 }
 func New() *Http {
 	c := Http{}
 	c.HttpTransport = &transport
-	c.Pool = &sync.Pool{
-		New: func() interface{} {
-			return bytes.NewBuffer(make([]byte, 4096))
-		},
-	}
-	c.Pool.New = func() interface{} {
-		return bytes.NewBuffer(make([]byte, 4096))
-	}
 	return &c
 }
 
