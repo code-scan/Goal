@@ -102,19 +102,7 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestPst in github.com/code-scan/Goal/tests">
-    <configuration name="TestBuff in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestBuff\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestManyReq in github.com/code-scan/Goal/tests">
     <configuration name="TestCrt in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -151,6 +139,18 @@
       <pattern value="^\QTestHttp\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestManyReq in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestManyReq\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestPst in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -176,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestManyReq in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestPst in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestBuff in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>

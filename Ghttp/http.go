@@ -28,7 +28,7 @@ type Http struct {
 	isSession       bool           //是否创建session
 	Ctx             context.Context
 	CtxCancel       context.CancelFunc
-	Pool            sync.Pool
+	Pool            *sync.Pool
 }
 
 //var HttpClient Http
@@ -38,37 +38,10 @@ type Http struct {
 //}
 var transport http.Transport
 
-func dialTimeout(network, addr string) (net.Conn, error) {
-	conn, err := net.DialTimeout(network, addr, time.Second*30)
-	if err != nil {
-		return conn, err
-	}
-	tcp_conn := conn.(*net.TCPConn)
-	tcp_conn.SetDeadline(time.Now().Add(30 * time.Second))
-	//tcp_conn.SetKeepAlive(false)
-
-	return tcp_conn, err
-}
-func TLSdialTimeout(network, addr string) (net.Conn, error) {
-	tc, err := tls.Dial("tcp", addr, &tls.Config{
-		InsecureSkipVerify: true,
-		NextProtos:         []string{"foo"},
-	})
-	//tc.SetReadDeadline(30 * time.Second)
-	if err != nil {
-		return nil, err
-	}
-	tc.SetDeadline(time.Now().Add(30 * time.Second))
-	if err := tc.Handshake(); err != nil {
-		return nil, err
-	}
-	return tc, nil
-}
 func init() {
 
 	transport = http.Transport{
-		//Dial:    dialTimeout,
-		//DialTLS: TLSdialTimeout,
+
 		//DisableKeepAlives: true,
 		TLSClientConfig: &tls.Config{
 			InsecureSkipVerify: true,
@@ -80,10 +53,13 @@ func init() {
 func New() *Http {
 	c := Http{}
 	c.HttpTransport = &transport
-	c.Pool = sync.Pool{
+	c.Pool = &sync.Pool{
 		New: func() interface{} {
 			return bytes.NewBuffer(make([]byte, 4096))
 		},
+	}
+	c.Pool.New = func() interface{} {
+		return bytes.NewBuffer(make([]byte, 4096))
 	}
 	return &c
 }
@@ -111,19 +87,6 @@ func (h *Http) New(method, urls string) error {
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	h.HttpRequest.WithContext(h.Ctx)
 	return err
-
-	//if h.HttpRequest == nil {
-	//	h.HttpRequest, err = Ghttp.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
-	//} else if h.isSession { //如果不是第一次请求 并且开启了session 则复用之前的request即可
-	//	var uri *url.URL
-	//	uri, err = url.Parse(h.HttpRequestUrl)
-	//	if err != nil {
-	//		return err
-	//	}
-	//	h.HttpRequest.Method = h.HttpRequestType
-	//	h.HttpRequest.URL = uri
-	//}
-
 }
 func (h *Http) SetTimeOut(t int) {
 	td := time.Duration(t)

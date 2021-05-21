@@ -77,7 +77,6 @@ func (h *Http) readAll() ([]byte, error) {
 // string的返回值
 func (h *Http) Text() (string, error) {
 	var result []byte
-
 	var err error
 	defer func() {
 		if r := recover(); r != nil {
