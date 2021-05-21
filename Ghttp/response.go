@@ -67,7 +67,7 @@ func (h *Http) readAll() ([]byte, error) {
 	}()
 	_, err := io.Copy(buffer, h.HttpResponse.Body)
 	if err != nil && err != io.EOF {
-		log.Printf("adapter io.copy failure error:%v \n", err)
+		//log.Printf("adapter io.copy failure error:%v \n", err)
 		return nil, fmt.Errorf("adapter io.copy failure error:%v", err)
 	}
 	defer h.HttpResponse.Body.Close()
