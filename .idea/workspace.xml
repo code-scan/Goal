@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
     </list>
@@ -138,6 +139,18 @@
       <pattern value="^\QTestDomainBoom\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestHttp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestHttp\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestPst in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -148,18 +161,6 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestPst\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestShodan in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestShodan\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -176,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Test.TestPst in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestBuff in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestShodan in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>

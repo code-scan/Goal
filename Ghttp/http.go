@@ -1,6 +1,7 @@
 package Ghttp
 
 import (
+	"bytes"
 	"context"
 	"crypto/tls"
 	"golang.org/x/net/proxy"
@@ -10,6 +11,7 @@ import (
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
+	"sync"
 	"time"
 )
 
@@ -26,6 +28,7 @@ type Http struct {
 	isSession       bool           //是否创建session
 	Ctx             context.Context
 	CtxCancel       context.CancelFunc
+	Pool            sync.Pool
 }
 
 //var HttpClient Http
@@ -71,7 +74,18 @@ func init() {
 			InsecureSkipVerify: true,
 		},
 	}
+
 	//log.Println("init http")
+}
+func New() *Http {
+	c := Http{}
+	c.HttpTransport = &transport
+	c.Pool = sync.Pool{
+		New: func() interface{} {
+			return bytes.NewBuffer(make([]byte, 4096))
+		},
+	}
+	return &c
 }
 
 // 新建一个请求
@@ -91,6 +105,7 @@ func (h *Http) New(method, urls string) error {
 		//log.Println("new transport")
 		h.HttpTransport = &transport
 	}
+
 	h.SetTimeOut(30)
 	h.IgnoreSSL()
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)

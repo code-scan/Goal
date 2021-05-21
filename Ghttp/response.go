@@ -1,8 +1,9 @@
 package Ghttp
 
 import (
+	"bytes"
+	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -37,8 +38,9 @@ func (h *Http) Close() {
 		}
 	}()
 	if h.HttpResponse != nil {
-		io.ReadAll(h.HttpResponse.Body)
 		h.HttpResponse.Body.Close()
+		//log.Println("CLose(): ", h.HttpResponse.Body)
+		h.readAll()
 	}
 	if h.CtxCancel != nil {
 		h.CtxCancel()
@@ -54,9 +56,28 @@ func (h *Http) GetRespHead(key string) string {
 	return ""
 }
 
+func (h *Http) readAll() ([]byte, error) {
+	buffer := h.Pool.Get().(*bytes.Buffer)
+	buffer.Reset()
+	defer func() {
+		if buffer != nil {
+			h.Pool.Put(buffer)
+			buffer = nil
+		}
+	}()
+	_, err := io.Copy(buffer, h.HttpResponse.Body)
+	if err != nil && err != io.EOF {
+		log.Printf("adapter io.copy failure error:%v \n", err)
+		return nil, fmt.Errorf("adapter io.copy failure error:%v", err)
+	}
+	defer h.HttpResponse.Body.Close()
+	return buffer.Bytes(), nil
+}
+
 // string的返回值
 func (h *Http) Text() (string, error) {
 	var result []byte
+
 	var err error
 	defer func() {
 		if r := recover(); r != nil {
@@ -69,12 +90,9 @@ func (h *Http) Text() (string, error) {
 	if h.HttpResponse.Body == nil {
 		return "", err
 	}
-	result, err = ioutil.ReadAll(h.HttpResponse.Body)
-	if err != nil {
-		log.Println("[!]Text Error: ", err)
-		return "", err
+	if result, err = h.readAll(); err != nil {
+		log.Println(err)
 	}
-	defer h.HttpResponse.Body.Close()
 	return string(result), err
 }
 
@@ -93,12 +111,9 @@ func (h *Http) Byte() ([]byte, error) {
 	if h.HttpResponse.Body == nil {
 		return result, err
 	}
-	result, err = ioutil.ReadAll(h.HttpResponse.Body)
-	if err != nil {
-		log.Println("[!]Text Error: ", err)
-		return result, err
+	if result, err = h.readAll(); err != nil {
+		log.Println(err)
 	}
-	defer h.HttpResponse.Body.Close()
 	return result, err
 }
 func (h *Http) SaveToFile(file string) (bool, error) {
