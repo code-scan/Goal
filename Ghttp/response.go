@@ -38,10 +38,12 @@ func (h *Http) Close() {
 		}
 	}()
 	if h.HttpResponse != nil {
-		//h.HttpResponse.Body.Close()
 		//log.Println("CLose(): ", h.HttpResponse.Body)
-		h.readAll()
+		//h.readAll()
+		h.readNull()
+		h.HttpResponse = nil
 	}
+
 	if h.CtxCancel != nil {
 		h.CtxCancel()
 	}
@@ -55,7 +57,10 @@ func (h *Http) GetRespHead(key string) string {
 	}
 	return ""
 }
-
+func (h *Http) readNull() ([]byte, error) {
+	_, err := io.Copy(io.Discard, h.HttpResponse.Body)
+	return nil, err
+}
 func (h *Http) readAll() ([]byte, error) {
 	//获取一个新的，如果不存在则会调用new创建
 	buffer := pool.Get().(*bytes.Buffer)

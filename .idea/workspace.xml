@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/Goal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/edu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/ff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/ff.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/ff2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/t.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,44 +57,23 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>HttpClient</find>
-      <find>execute</find>
-      <find>Ex</find>
-      <find>Execute</find>
-      <find>sensor.</find>
-      <find>Records</find>
-      <find>getCsrfToken</find>
-      <find>./cookie.txt</find>
-      <find>21cbh.media.baidu.com</find>
-      <find>sameserver</find>
-      <find>cookie</find>
-      <find>log.prin</find>
-      <find>log.Println</find>
-      <find>dialContext</find>
-      <find>h.HttpRequest</find>
-      <find>log.Pr</find>
-      <find>Panicln</find>
-      <find>GetResult 2 Error</find>
-      <find>log.Println(&quot;[!]GetResult</find>
-      <find>SubDomainRespsonse</find>
-      <find>log.println(&quot;[!</find>
-      <find>_next/data/</find>
-      <find>SecTrail</find>
-      <find>h.HttpResponse</find>
-      <find>s.http.Execute()</find>
-      <find>最近解析</find>
-      <find>icon</find>
-      <find>ahistory</find>
-    </findStrings>
-  </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/http.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/local/go/src/net/http/request.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Gnet/tcp.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qkQarDfJbM5647FajXBaFm92od" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -93,6 +98,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -100,80 +106,85 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestManyReq in github.com/code-scan/Goal/tests">
-    <configuration name="TestCrt in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestCrt\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDomainBoom in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestDomainBoom\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestHttp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestHttp\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestManyReq in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestManyReq\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestPst in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestPst\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa">
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
-      <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="github.com/code-scan/Goal/tests" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
+      <framework value="gotest" />
       <pattern value="^TestTcp$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestBuff" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestBuff\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestCrt" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCrt\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestDomainBoom" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestDomainBoom\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestFofa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFofa\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestWebapp" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestWebapp\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestManyReq in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestPst in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestHttp in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestWebapp" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestDomainBoom" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestCrt" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBuff" />
       </list>
     </recent_temporary>
   </component>
@@ -187,38 +198,6 @@
       <updated>1617621176914</updated>
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 28m 43s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 30m 25s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 32m 04s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 33m 47s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 34m 22s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 35m 05s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 35m 44s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.18 at 23h 35m 51s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.19 at 10h 49m 10s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSQL_in_github_com_code-scan_Goal_tests - 2021.04.19 at 10h 49m 37s.xml">
-      <configuration name="TestSQL in github.com/code-scan/Goal/tests" configurationId="GoTestRunConfiguration" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
