@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/Goal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/edu.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/ff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/ff.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/ff2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/t.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/http_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cpu.pprof" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cpu.pprof" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +100,7 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa">
+  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestManyReq">
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -116,18 +110,6 @@
       <filePath value="$PROJECT_DIR$/" />
       <framework value="gotest" />
       <pattern value="^TestTcp$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestBuff" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestBuff\E$" />
       <method v="2" />
     </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestCrt" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -166,6 +148,18 @@
       <pattern value="^\QTestFofa\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestManyReq" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestManyReq\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestWebapp" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -180,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestManyReq" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestWebapp" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestDomainBoom" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestCrt" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBuff" />
       </list>
     </recent_temporary>
   </component>

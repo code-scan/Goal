@@ -16,7 +16,7 @@ import (
 )
 
 type Http struct {
-	HttpClient      http.Client    // http客户端
+	HttpClient      *http.Client   // http客户端
 	HttpRequest     *http.Request  // Ghttp 请求
 	HttpResponse    *http.Response // Ghttp 返回值
 	HttpRequestUrl  string         //请求的url
@@ -80,6 +80,7 @@ func (h *Http) New(method, urls string) error {
 		//log.Println("new transport")
 		h.HttpTransport = &transport
 	}
+	h.HttpClient = &http.Client{Transport: h.HttpTransport}
 
 	h.SetTimeOut(30)
 	h.IgnoreSSL()
