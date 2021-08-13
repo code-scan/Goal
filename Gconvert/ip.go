@@ -27,6 +27,7 @@ func IPinfo(ip string, token string) IPinfoResult {
 		http.SetHeader("Authorization", fmt.Sprintf("Bearer %s", token))
 	}
 	http.Execute()
+	defer http.Close()
 	ret, err := http.Byte()
 	if err != nil {
 		log.Println("[!] IPinfo Error: ", err)

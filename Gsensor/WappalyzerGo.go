@@ -48,6 +48,7 @@ func (s *WappalyzerGo) GetResult() Result {
 	//resp, err := http.DefaultClient.Get(s.Domain)
 	s.Http.New("GET", s.Domain)
 	resp := s.Http.Execute()
+	defer s.Http.Close()
 	if resp == nil {
 		log.Println("resp nil")
 		return r

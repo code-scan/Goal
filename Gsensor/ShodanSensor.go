@@ -64,6 +64,7 @@ func (s *Shodan) GetResult() Result {
 	uri := fmt.Sprintf("https://api.shodan.io/shodan/host/%s?key=MM72AkzHXdHpC8iP65VVEEVrJjp7zkgd&minify=true", s.Domain)
 	s.http.New("GET", uri)
 	s.http.Execute()
+	defer s.http.Close()
 	ret, _ := s.http.Byte()
 	shodanResult := ShodanResult{}
 	err := json.Unmarshal(ret, &shodanResult)

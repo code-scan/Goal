@@ -107,6 +107,7 @@ func (s *Fofa) send(query string) []byte {
 	urls := fmt.Sprintf("https://fofa.so/api/v1/search/all?email=%s&key=%s&qbase64=%s&size=10000", s.UserName, s.PassWord, query)
 	s.http.New("GET", urls)
 	s.http.Execute()
+	defer s.http.Close()
 	resp, err := s.http.Byte()
 	if err != nil {
 		log.Println(err)

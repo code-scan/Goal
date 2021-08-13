@@ -55,6 +55,7 @@ func (s *SecurityTrails) GetResult() Result {
 func (s *SecurityTrails) CheckLogin() bool {
 	s.http.New("GET", "https://securitytrails.com/app/account")
 	s.http.Execute()
+	defer s.http.Close()
 	ret, _ := s.http.Text()
 	return strings.Contains(ret, s.UserName)
 }
@@ -75,6 +76,7 @@ func (s *SecurityTrails) Login(ReLogin bool) bool {
 	s.http.New("POST", "https://securitytrails.com/api/auth/login")
 	s.http.SetPostJson(postData)
 	s.http.Execute()
+	defer s.http.Close()
 	s.Cookie = s.http.RespCookie()
 	s.GetBuildId()
 	return true
@@ -186,5 +188,6 @@ func (s *SecurityTrails) httpReq(uri string) ([]byte, error) {
 	s.http.New("POST", uri)
 	s.http.SetCookie(s.Cookie)
 	s.http.Execute()
+	defer s.http.Close()
 	return s.http.Byte()
 }

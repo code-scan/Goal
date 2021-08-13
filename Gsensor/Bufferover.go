@@ -54,6 +54,7 @@ func (s *Bufferover) GetResult() Result {
 	}
 	s.http.Get("https://dns.bufferover.run/dns?q=." + s.Domain)
 	s.http.Execute()
+	defer s.http.Close()
 	ret, err := s.http.Byte()
 	if err != nil {
 		log.Println("[!]GetResult Error: ", err, s.GetInfo())

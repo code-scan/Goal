@@ -45,6 +45,7 @@ func (s *DomainBoom) GetResult() Result {
 	uri := fmt.Sprintf("http://domain.f5.pm/api.php?key=%s&domain=%s", s.PassWord, s.Domain)
 	s.http.New("GET", uri)
 	s.http.Execute()
+	defer s.http.Close()
 	ret, _ := s.http.Byte()
 	dmresult := DomainBoomResult{}
 	if err := json.Unmarshal(ret, &dmresult); err != nil {
