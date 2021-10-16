@@ -21,16 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gconvert/ip.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gconvert/ip.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/Bufferover.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/Bufferover.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/CrtSh.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/CrtSh.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/DomainBoom.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/DomainBoom.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/FofaSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/FofaSensor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/ShodanSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/ShodanSensor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/WappalyzerGo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,15 +56,15 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ghttp/http.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/go/src/net/http/request.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Gnet/tcp.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qkQarDfJbM5647FajXBaFm92od" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"context"
 	"crypto/tls"
-	"golang.org/x/net/proxy"
 	"io"
 	"log"
 	"net"
@@ -13,6 +12,8 @@ import (
 	"net/url"
 	"sync"
 	"time"
+
+	"golang.org/x/net/proxy"
 )
 
 type Http struct {
@@ -74,7 +75,10 @@ func (h *Http) New(method, urls string) error {
 		if h.Cookie == nil {
 			h.Cookie, _ = cookiejar.New(nil)
 		}
-		h.HttpClient.Jar = h.Cookie
+		if h.HttpClient.Jar == nil {
+			h.HttpClient.Jar = h.Cookie
+
+		}
 	}
 	if h.HttpTransport == nil {
 		//log.Println("new transport")
