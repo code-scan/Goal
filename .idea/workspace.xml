@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
+      <change afterPath="$PROJECT_DIR$/tests/cookie_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Goal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Goal.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/cookie.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/cookie.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GOROOT" url="file:///usr/lib/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,14 +65,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ghttp/http.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///usr/local/go/src/net/http/request.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/http.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gnet/tcp.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qkQarDfJbM5647FajXBaFm92od" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -82,13 +89,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +106,19 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestWebapp">
+  <component name="RunManager" selected="Go Test.TestCookie in github.com/code-scan/Goal/tests">
+    <configuration name="TestCookie in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCookie\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -107,18 +128,6 @@
       <filePath value="$PROJECT_DIR$/" />
       <framework value="gotest" />
       <pattern value="^TestTcp$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestBuff" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestBuff\E$" />
       <method v="2" />
     </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestCrt" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -171,11 +180,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestWebapp" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestCrt" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBuff" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestShodan" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
+        <item itemvalue="Go Test.TestCookie in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>

@@ -71,20 +71,20 @@ func (h *Http) New(method, urls string) error {
 	h.HttpRequestUrl = urls
 	h.HttpRequestType = method
 	// 初始化http client 如果开启了session，则传入cookie jar
+	if h.HttpTransport == nil {
+		//log.Println("new transport")
+		h.HttpTransport = &transport
+	}
+	h.HttpClient = &http.Client{Transport: h.HttpTransport}
+
 	if h.isSession {
 		if h.Cookie == nil {
 			h.Cookie, _ = cookiejar.New(nil)
 		}
 		if h.HttpClient.Jar == nil {
 			h.HttpClient.Jar = h.Cookie
-
 		}
 	}
-	if h.HttpTransport == nil {
-		//log.Println("new transport")
-		h.HttpTransport = &transport
-	}
-	h.HttpClient = &http.Client{Transport: h.HttpTransport}
 
 	h.SetTimeOut(30)
 	h.IgnoreSSL()

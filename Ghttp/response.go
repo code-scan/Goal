@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-//发送请求
+// Execute 发送请求
 func (h *Http) Execute() *http.Response {
 	defer func() {
 		if err := recover(); err != nil {
@@ -30,7 +30,7 @@ func (h *Http) Execute() *http.Response {
 	return h.HttpResponse
 }
 
-// 关闭请求与body
+// Close 关闭请求与body
 func (h *Http) Close() {
 	defer func() {
 		if err := recover(); err != nil {
@@ -50,7 +50,7 @@ func (h *Http) Close() {
 
 }
 
-//获取返回头
+// GetRespHead 获取返回头
 func (h *Http) GetRespHead(key string) string {
 	if h.HttpResponse != nil {
 		return h.HttpResponse.Header.Get(key)

@@ -12,7 +12,12 @@ func (h *Http) AddCookieJar(key, val string) {
 		Domain: "." + h.HttpRequest.Host,
 		Path:   "/",
 	}
-	h.Cookie.SetCookies(h.HttpRequest.URL, []*http.Cookie{&ck})
+	if h.isSession{
+		h.HttpClient.Jar.SetCookies(h.HttpRequest.URL, []*http.Cookie{&ck})
+	}else{
+		h.Cookie.SetCookies(h.HttpRequest.URL, []*http.Cookie{&ck})
+	}
+
 
 }
 func (h *Http) SetCookie(cookie string) {
