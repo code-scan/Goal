@@ -60,6 +60,16 @@
     httpClient.Execute()
 ```
 
+#### 开启Session 自动记录cookie
+
+```go
+    httpClient := Ghttp.New()
+    httpClient.Session()
+    httpClient.New("GET","https://www.baidu.com")
+    httpClient.Execute()
+
+```
+
 #### 发送Post Json请求
 
 ```go
