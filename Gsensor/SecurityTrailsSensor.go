@@ -108,6 +108,7 @@ func (s *SecurityTrails) GetSubDomain(page int) {
 	hostName := SubDomainRespsonse{}
 	err = json.Unmarshal(resp, &hostName)
 	if err != nil {
+		log.Println(string(resp))
 		log.Println("[!] ", s.GetInfo(), " GetSubDomain 2 Error: ", err)
 		return
 
