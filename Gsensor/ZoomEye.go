@@ -31,7 +31,7 @@ type ZoomEyeResultList struct {
 }
 
 func (s *ZoomEye) GetInfo() string {
-	return "FofaImpl ver 0.1 with  " + s.Type
+	return "ZoomEye ver 0.1 with  " + s.Type
 }
 func (s *ZoomEye) SetType(Type string) {
 	s.Type = Type
