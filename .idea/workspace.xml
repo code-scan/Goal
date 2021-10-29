@@ -23,8 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
+      <change afterPath="$PROJECT_DIR$/Gsensor/KSubDomainSensor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/device.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/localStruct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/recv.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/result.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/send.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/stack.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/subnames_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/ZoomEye.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/ZoomEye.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +67,14 @@
   <component name="GOROOT" url="file:///usr/lib/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -90,31 +110,22 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Gsensor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Gsensor" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestZoom in github.com/code-scan/Goal/tests">
-    <configuration name="TestCookie in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestCookie\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestSub in github.com/code-scan/Goal/tests">
     <configuration name="TestCrt in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -137,6 +148,19 @@
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestDomainBoom\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSub in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <sudo value="true" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSub\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
@@ -174,13 +198,21 @@
       <pattern value="^\QTestSecTrail\E$" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Test.TestTcp in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go Test.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
+      <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go Test.TestSub in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go Test.TestZoom in github.com/code-scan/Goal/tests" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestSub in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestZoom in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
         <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
         <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestCookie in github.com/code-scan/Goal/tests" />
       </list>
     </recent_temporary>
   </component>
