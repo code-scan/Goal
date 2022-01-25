@@ -2,14 +2,18 @@ package Ghttp
 
 import (
 	"bytes"
+	"compress/gzip"
 	"context"
 	"crypto/tls"
+	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
+	"strings"
 	"sync"
 	"time"
 
@@ -31,6 +35,7 @@ type Http struct {
 	CtxCancel       context.CancelFunc
 	//Pool            *sync.Pool
 }
+type Headers map[string]string
 
 //var HttpClient Http
 //
@@ -149,4 +154,55 @@ func (h *Http) DontRedirect() {
 }
 func (h *Http) DontKeepAlive() {
 	h.HttpTransport.DisableKeepAlives = true
+}
+
+func Get(url, proxy string, headers Headers) ([]byte, error) {
+	http := New()
+	http.Get(url)
+	for k, v := range headers {
+		http.SetHeader(k, v)
+	}
+	if proxy != "" {
+		http.SetProxy(proxy)
+	}
+	http.IgnoreSSL()
+	http.SetTimeOut(30)
+	resp := http.Execute()
+	if resp == nil {
+		return nil, fmt.Errorf("http connect error")
+	}
+	if http.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
+		reader, err := gzip.NewReader(http.HttpResponse.Body)
+		if err != nil {
+			return nil, err
+		}
+		defer reader.Close()
+		return ioutil.ReadAll(reader)
+	}
+	return http.Byte()
+
+}
+func Post(url string, data interface{}, proxy string, headers Headers) ([]byte, error) {
+	http := New()
+	http.Post(url, data)
+	for k, v := range headers {
+		http.SetHeader(k, v)
+	}
+	if proxy != "" {
+		http.SetProxy(proxy)
+	}
+	http.IgnoreSSL()
+	if strings.HasPrefix(data.(string), "{") == false {
+		http.SetContentType("form")
+	}
+	http.Execute()
+	if http.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
+		reader, err := gzip.NewReader(http.HttpResponse.Body)
+		if err != nil {
+			return nil, err
+		}
+		defer reader.Close()
+		return ioutil.ReadAll(reader)
+	}
+	return http.Byte()
 }

@@ -23,20 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
-      <change afterPath="$PROJECT_DIR$/Gsensor/KSubDomainSensor.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/device.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/localStruct.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/recv.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/result.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/send.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/stack.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/struct.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/ksubdomain/util.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/subnames_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ghttp/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/Ghttp/response.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +102,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Gsensor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -125,19 +114,7 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSub in github.com/code-scan/Goal/tests">
-    <configuration name="TestCrt in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestCrt\E$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestHead">
     <configuration name="TestDomainBoom in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -186,6 +163,18 @@
       <pattern value="^\QTestZoom\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestHead" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestHead\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestSecTrail" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -199,20 +188,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestTcp in github.com/code-scan/Goal/tests" />
-      <item itemvalue="Go Test.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
-      <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
-      <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
-      <item itemvalue="Go Test.TestSub in github.com/code-scan/Goal/tests" />
-      <item itemvalue="Go Test.TestZoom in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go 测试.TestTcp in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go 测试.TestDomainBoom in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go 测试.TestSub in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go 测试.TestZoom in github.com/code-scan/Goal/tests" />
+      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
+      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestHead" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSub in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestZoom in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
-        <item itemvalue="Go Test.TestCrt in github.com/code-scan/Goal/tests" />
-        <item itemvalue="Go Test.TestDomainBoom in github.com/code-scan/Goal/tests" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestHead" />
       </list>
     </recent_temporary>
   </component>
