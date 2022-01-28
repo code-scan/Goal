@@ -1,3 +1,6 @@
+//go:build ksub
+// +build ksub
+
 package Gsensor
 
 import (
