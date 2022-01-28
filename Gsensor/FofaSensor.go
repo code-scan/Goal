@@ -4,9 +4,10 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"strings"
+
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 type Fofa struct {
@@ -104,7 +105,7 @@ func (s *Fofa) GetPorts() {
 func (s *Fofa) send(query string) []byte {
 	var result []byte
 	query = base64.StdEncoding.EncodeToString([]byte(query))
-	urls := fmt.Sprintf("https://fofa.so/api/v1/search/all?email=%s&key=%s&qbase64=%s&size=10000", s.UserName, s.PassWord, query)
+	urls := fmt.Sprintf("https://fofa.info/api/v1/search/all?email=%s&key=%s&qbase64=%s&size=10000", s.UserName, s.PassWord, query)
 	s.http.New("GET", urls)
 	s.http.Execute()
 	defer s.http.Close()
