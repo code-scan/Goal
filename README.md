@@ -1,5 +1,7 @@
 # Goal Go Red-Team 工具类
 
+`如果要编译带ksubdomain的则需要 -tags ksub`
+
 - #### Ghttp    Http客户端
     - [x] Get/Post/Head..
     - [x] SetHeader

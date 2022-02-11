@@ -106,6 +106,7 @@ func (s *Fofa) send(query string) []byte {
 	var result []byte
 	query = base64.StdEncoding.EncodeToString([]byte(query))
 	urls := fmt.Sprintf("https://fofa.info/api/v1/search/all?email=%s&key=%s&qbase64=%s&size=10000", s.UserName, s.PassWord, query)
+	log.Println(urls)
 	s.http.New("GET", urls)
 	s.http.Execute()
 	defer s.http.Close()
