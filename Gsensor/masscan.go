@@ -47,7 +47,7 @@ func (s *MassScan) GetResult() Result {
 	//m.SetSystemPath("/usr/local/masscan/bin/masscan")
 
 	// 扫描端口范围
-	m.SetPorts("0-50")
+	m.SetPorts("0-65535")
 
 	// 扫描IP范围
 	m.SetRanges(s.Domain)
