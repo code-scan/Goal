@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
-      <change afterPath="$PROJECT_DIR$/Gsensor/AiQiCha.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gsensor/AiQiChapResponse.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/AiQiCha.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/AiQiCha.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,6 +173,18 @@
       <pattern value="^\QTestQiYe\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestQiYeHold" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Goal" />
+      <working_directory value="$PROJECT_DIR$/tests" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/code-scan/Goal/tests" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestQiYeHold\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestSecTrail" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -190,32 +197,21 @@
       <pattern value="^\QTestSecTrail\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="sensor_test.go 中的 TestFofa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Goal" />
-      <working_directory value="$PROJECT_DIR$/tests" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/tests/sensor_test.go" />
-      <framework value="gotest" />
-      <pattern value="^\QTestFofa\E$" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Go 测试.TestTcp in github.com/code-scan/Goal/tests" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
-      <item itemvalue="Go 测试.sensor_test.go 中的 TestFofa" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
+      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYeHold" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYeHold" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
-        <item itemvalue="Go 测试.sensor_test.go 中的 TestFofa" />
       </list>
     </recent_temporary>
   </component>

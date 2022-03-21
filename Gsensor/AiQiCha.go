@@ -48,22 +48,42 @@ func (s *AiQiCha) SetType(type_ string) {
 
 func (s *AiQiCha) GetResult() Result {
 	s.result = Result{}
-	if s.Type != "qiye" {
-		return s.result
+
+	switch s.Type {
+	case "qiye":
+		s.getQiye()
+	case "qiye_hold":
+		s.getQiyeHold()
 	}
-	result := s.searhKeyword()
-	log.Println(result)
-	for _, corp := range result.Data.ResultList {
-		corp.EntName = strings.ReplaceAll(corp.EntName, "<em>", "")
-		corp.EntName = strings.ReplaceAll(corp.EntName, "</em>", "")
-		s.result[corp.EntName] = s.getDomain(corp.Pid)
-	}
+
 	// 获取子公司
 
 	return s.result
 
 }
 
+func (s *AiQiCha) getQiye() {
+	result := s.searhKeyword()
+	log.Println(result)
+	for _, corp := range result.Data.ResultList {
+		corp.EntName = strings.ReplaceAll(corp.EntName, "<em>", "")
+		corp.EntName = strings.ReplaceAll(corp.EntName, "</em>", "")
+		corp.EntName = fmt.Sprintf("%s|||%s", corp.EntName, corp.Pid)
+		s.result[corp.EntName] = s.getDomain(corp.Pid)
+	}
+}
+func (s *AiQiCha) getQiyeHold() Result {
+	// 通过关键词查询，这里讲道理应该传递进来的企业id会更简单
+	uri := fmt.Sprintf("https://aiqicha.baidu.com/detail/holdsAjax?pid=%s&page=1&size=100", s.Domain)
+	ret, _ := s.get(uri)
+	var resp AiQiChaHoldResponse
+	json.Unmarshal(ret, &resp)
+	for _, l := range resp.Data.List {
+		s.result[l.EntName] = s.getDomain(l.Pid)
+	}
+	return s.result
+
+}
 func (s *AiQiCha) searhKeyword() AiQiChaSearchResponse {
 	uri := fmt.Sprintf("https://aiqicha.baidu.com/app/advanceFilterAjax?o=0&p=1&q=%s&t=111", Gconvert.UrlEncode(s.Domain))
 	ret, _ := s.get(uri)
@@ -103,10 +123,6 @@ func (s *AiQiCha) getICP(id string) string {
 		}
 	}
 	return website
-}
-func (s *AiQiCha) getHold(id string) AiQiChaHoldResponse {
-	//uri := fmt.Sprintf("https://aiqicha.baidu.com/detail/holdsAjax?pid=%s&page=1&size=100", id)
-	return AiQiChaHoldResponse{}
 }
 
 func (s *AiQiCha) get(uri string) ([]byte, error) {
