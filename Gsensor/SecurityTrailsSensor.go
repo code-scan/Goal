@@ -21,6 +21,7 @@ type SecurityTrails struct {
 	http     Ghttp.Http
 	result   Result
 	buildId  string
+	hostIp   string
 }
 
 var Cookie string
@@ -53,7 +54,9 @@ func (s *SecurityTrails) GetResult() Result {
 	return s.result
 }
 func (s *SecurityTrails) CheckLogin() bool {
-	s.http.New("GET", "https://securitytrails.com/app/account")
+	s.http.New("GET", "https://151.139.240.16/app/account")
+	s.http.IgnoreSSL()
+	s.http.HttpRequest.Host = "securitytrails.com"
 	s.http.Execute()
 	defer s.http.Close()
 	ret, _ := s.http.Text()
@@ -73,7 +76,9 @@ func (s *SecurityTrails) Login(ReLogin bool) bool {
 	postData["email"] = s.UserName
 	postData["password"] = s.PassWord
 
-	s.http.New("POST", "https://securitytrails.com/api/auth/login")
+	s.http.New("POST", "https://151.139.240.16/api/auth/login")
+	s.http.IgnoreSSL()
+	s.http.HttpRequest.Host = "securitytrails.com"
 	s.http.SetPostJson(postData)
 	s.http.Execute()
 	defer s.http.Close()
@@ -83,6 +88,8 @@ func (s *SecurityTrails) Login(ReLogin bool) bool {
 }
 func (s *SecurityTrails) GetBuildId() {
 	ret, err := s.httpReq("https://securitytrails.com/list/apex_domain/baidu.com")
+	s.http.IgnoreSSL()
+	s.http.SetHeader("Host", "securitytrails.com")
 	if err != nil {
 		log.Println("[!] ", s.GetInfo(), " GetBuildId Error: ", err)
 	}
@@ -186,7 +193,12 @@ func (s *SecurityTrails) GetIp(page int) {
 	}
 }
 func (s *SecurityTrails) httpReq(uri string) ([]byte, error) {
+	s.hostIp = "151.139.240.16"
+	uri = strings.ReplaceAll(uri, "securitytrails.com", s.hostIp)
 	s.http.New("POST", uri)
+	log.Println(uri)
+	s.http.IgnoreSSL()
+	s.http.HttpRequest.Host = "securitytrails.com"
 	s.http.SetCookie(s.Cookie)
 	s.http.Execute()
 	defer s.http.Close()

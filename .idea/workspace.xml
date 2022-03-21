@@ -23,8 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
+      <change afterPath="$PROJECT_DIR$/Gsensor/AiQiCha.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gsensor/AiQiChapResponse.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gsensor/masscan.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/masscan.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +74,24 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Gsensor/masscan.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/dean2021/go-masscan@v0.0.0-20181206040455-0ec37606e016/parse.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/dean2021/go-masscan@v0.0.0-20181206040455-0ec37606e016/masscan.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/ISensor.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gnet/tcp.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/FofaSensor.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/proxy_test.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ghttp/http.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/http_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsResponse.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gnet/tcp.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/proxy_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/masscan.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/ISensor.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gsensor/ZoomEye.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/FofaSensor.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/dean2021/go-masscan@v0.0.0-20181206040455-0ec37606e016/masscan.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/dean2021/go-masscan@v0.0.0-20181206040455-0ec37606e016/parse.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/tests/sensor_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gsensor/WappalyzerGo.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ghttp/response.go" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1qkQarDfJbM5647FajXBaFm92od" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -105,6 +114,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Gsensor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -120,7 +130,7 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian">
+  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe">
     <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
@@ -156,7 +166,7 @@
       <pattern value="^\QTestFofa\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestHead" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="github.com/code-scan/Goal/tests 中的 TestQiYe" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
@@ -165,7 +175,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestHead\E$" />
+      <pattern value="^\QTestQiYe\E$" />
       <method v="2" />
     </configuration>
     <configuration name="github.com/code-scan/Goal/tests 中的 TestSecTrail" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -194,18 +204,18 @@
     <list>
       <item itemvalue="Go 测试.TestTcp in github.com/code-scan/Goal/tests" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestHead" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
       <item itemvalue="Go 测试.sensor_test.go 中的 TestFofa" />
       <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
+      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
         <item itemvalue="Go 测试.sensor_test.go 中的 TestFofa" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestHead" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +257,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -267,12 +276,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go</url>
-          <line>108</line>
+          <line>115</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/Gsensor/SecurityTrailsSensor.go</url>
-          <line>92</line>
+          <line>99</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
