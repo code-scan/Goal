@@ -78,7 +78,8 @@ func (s *Beian) GetResult() Result {
 	switch s.Type {
 	case "beian":
 		s.Beian()
-
+	case "qiye":
+		s.Beian()
 	}
 	return s.result
 }
@@ -97,10 +98,11 @@ func (s *Beian) Beian() {
 	var r BeianResult
 	json.Unmarshal(ret, &r)
 	for _, result := range r.Result.Content {
-		if _, ok := s.result[result.MainLicence]; ok {
-			s.result[result.MainLicence] = s.result[result.MainLicence] + ";" + result.Domain
+		key := fmt.Sprintf("%s|||%s", result.MainLicence, result.UnitName)
+		if _, ok := s.result[key]; ok {
+			s.result[key] = s.result[key] + ";" + result.Domain
 		}
-		s.result[result.MainLicence] = result.Domain
+		s.result[key] = result.Domain
 	}
 }
 func (s *Beian) Login(_ bool) bool {
