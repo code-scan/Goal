@@ -74,10 +74,15 @@ func (s *Beian) SetType(type_ string) {
 
 func (s *Beian) GetResult() Result {
 	s.result = Result{}
-	if s.Type != "beian" {
-		return s.result
-	}
 
+	switch s.Type {
+	case "beian":
+		s.Beian()
+
+	}
+	return s.result
+}
+func (s *Beian) Beian() {
 	postData := fmt.Sprintf("keyword=%s&pageIndex=1&pageSize=2000", Gconvert.UrlEncode(s.Domain))
 	s.http.Post("https://m-beian.miit.gov.cn/webrec/queryRec", postData)
 	s.http.SetContentType("application/x-www-form-urlencoded")
@@ -87,16 +92,17 @@ func (s *Beian) GetResult() Result {
 	log.Println(string(ret))
 	if err != nil {
 		log.Println(err)
-		return nil
+		return
 	}
 	var r BeianResult
 	json.Unmarshal(ret, &r)
 	for _, result := range r.Result.Content {
-		s.result[result.Domain] = result.MainLicence
+		if _, ok := s.result[result.MainLicence]; ok {
+			s.result[result.MainLicence] = s.result[result.MainLicence] + ";" + result.Domain
+		}
+		s.result[result.MainLicence] = result.Domain
 	}
-	return s.result
 }
-
 func (s *Beian) Login(_ bool) bool {
 	return true
 }
