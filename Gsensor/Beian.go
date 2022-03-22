@@ -99,6 +99,7 @@ func (s *Beian) Beian() {
 		key := fmt.Sprintf("%s|||%s", result.MainLicence, result.UnitName)
 		if _, ok := s.result[key]; ok {
 			s.result[key] = s.result[key] + ";" + result.Domain
+			continue
 		}
 		s.result[key] = result.Domain
 	}

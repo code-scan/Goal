@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee08bb2-d13d-48ea-a8e1-62f8f868f810" name="Default Changelist" comment="oe">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gsensor/Beian.go" beforeDir="false" afterPath="$PROJECT_DIR$/Gsensor/Beian.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sensor_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensor_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,7 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe">
+  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$" />
@@ -222,9 +224,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYeHold" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
         <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
       </list>
