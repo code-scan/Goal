@@ -7,7 +7,7 @@ import (
 	"github.com/code-scan/Goal/Gconvert"
 	"github.com/code-scan/Goal/Ghttp"
 	tls "github.com/refraction-networking/utls"
-	"log"
+	"net/http"
 	"strings"
 )
 
@@ -17,6 +17,7 @@ type AiQiCha struct {
 	result Result
 	Cookie string
 	http   Ghttp.Http
+	tr     *http.Transport
 }
 type Browser struct {
 	Ja3       string
@@ -34,6 +35,16 @@ func (s *AiQiCha) SetDomain(domain string) {
 }
 
 func (s *AiQiCha) SetAccount(cookie string) {
+	config := tls.Config{
+		InsecureSkipVerify: true,
+	}
+	ja3List := []Browser{
+		{Ja3: "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53-10,0-23-65281-10-11-35-16-5-13-18-51-45-43-27,29-23-24,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
+		{Ja3: "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49188-49187-49162-49161-49192-49191-49172-49171-157-156-61-60-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-21,29-23-24-25,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
+		{Ja3: "771,4865-4866-4867-49196-49195-49188-49187-49162-49161-52393-49200-49199-49192-49191-49172-49171-52392-157-156-61-60-53-47-49160-49170-10,65281-0-23-13-5-18-16-11-51-45-43-10-21,29-23-24-25,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
+	}
+	tr, _ := ja3transport.NewTransportWithConfig(ja3List[2].Ja3, &config)
+	s.tr = tr
 	s.Cookie = cookie
 	return
 }
@@ -63,14 +74,19 @@ func (s *AiQiCha) GetResult() Result {
 }
 
 func (s *AiQiCha) getQiye() {
-	result := s.searhKeyword()
-	log.Println(result)
-	for _, corp := range result.Data.ResultList {
-		corp.EntName = strings.ReplaceAll(corp.EntName, "<em>", "")
-		corp.EntName = strings.ReplaceAll(corp.EntName, "</em>", "")
-		corp.EntName = fmt.Sprintf("%s|||%s", corp.EntName, corp.Pid)
-		s.result[corp.EntName] = s.getDomain(corp.Pid)
+	for i := 1; i < 10; i++ {
+		result := s.searhKeyword(i)
+		if len(result.Data.ResultList) == 0 {
+			break
+		}
+		for _, corp := range result.Data.ResultList {
+			corp.EntName = strings.ReplaceAll(corp.EntName, "<em>", "")
+			corp.EntName = strings.ReplaceAll(corp.EntName, "</em>", "")
+			corp.EntName = fmt.Sprintf("%s|||%s", corp.EntName, corp.Pid)
+			s.result[corp.EntName] = s.getDomain(corp.Pid)
+		}
 	}
+
 }
 func (s *AiQiCha) getQiyeHold() Result {
 	// 通过关键词查询，这里讲道理应该传递进来的企业id会更简单
@@ -84,8 +100,8 @@ func (s *AiQiCha) getQiyeHold() Result {
 	return s.result
 
 }
-func (s *AiQiCha) searhKeyword() AiQiChaSearchResponse {
-	uri := fmt.Sprintf("https://aiqicha.baidu.com/app/advanceFilterAjax?o=0&p=1&q=%s&t=111", Gconvert.UrlEncode(s.Domain))
+func (s *AiQiCha) searhKeyword(page int) AiQiChaSearchResponse {
+	uri := fmt.Sprintf("https://aiqicha.baidu.com/app/advanceFilterAjax?o=0&p=%d&q=%s&t=111", page, Gconvert.UrlEncode(s.Domain))
 	ret, _ := s.get(uri)
 	var response AiQiChaSearchResponse
 	json.Unmarshal(ret, &response)
@@ -137,19 +153,11 @@ func (s *AiQiCha) get(uri string) ([]byte, error) {
 	s.http.SetHeader("Referer", "https://aiqicha.baidu.com/usercenter")
 	s.http.SetHeader("Connection", "keep-alive")
 	//s.http.IgnoreSSL()
-	config := tls.Config{
-		InsecureSkipVerify: true,
-	}
-	ja3List := []Browser{
-		{Ja3: "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53-10,0-23-65281-10-11-35-16-5-13-18-51-45-43-27,29-23-24,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
-		{Ja3: "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49188-49187-49162-49161-49192-49191-49172-49171-157-156-61-60-53-47-49160-49170-10,0-23-65281-10-11-16-5-13-18-51-45-43-21,29-23-24-25,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
-		{Ja3: "771,4865-4866-4867-49196-49195-49188-49187-49162-49161-52393-49200-49199-49192-49191-49172-49171-52392-157-156-61-60-53-47-49160-49170-10,65281-0-23-13-5-18-16-11-51-45-43-10-21,29-23-24-25,0", UserAgent: "aiinquiry/2.4.7 (iPhone; iOS 15.4; Scale/3.00) Ios (21) 11462417584689898958 aiqicha/2.4.7"},
-	}
-	tr, _ := ja3transport.NewTransportWithConfig(ja3List[2].Ja3, &config)
-	s.http.HttpTransport = tr
+
+	s.http.HttpTransport = s.tr
 	s.http.SetCookie(s.Cookie)
 	//s.http.SetProxy("http://127.0.0.1:8080")
-	s.http.HttpClient.Transport = tr
+	s.http.HttpClient.Transport = s.tr
 	s.http.Execute()
 	defer s.http.Close()
 	ret, err := s.http.Byte()
