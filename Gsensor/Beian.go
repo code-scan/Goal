@@ -78,8 +78,6 @@ func (s *Beian) GetResult() Result {
 	switch s.Type {
 	case "beian":
 		s.Beian()
-	case "qiye":
-		s.Beian()
 	}
 	return s.result
 }
