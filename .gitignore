@@ -4,6 +4,5 @@ github.com/
 cmd/main
 cmd/logs
 cmd/
-tests/
 main.go
 ./main.go
