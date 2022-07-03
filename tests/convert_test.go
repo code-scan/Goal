@@ -1,10 +1,11 @@
 package test
 
 import (
-	"github.com/code-scan/Goal/Gconvert"
 	"log"
 	"testing"
 	"time"
+
+	"github.com/code-scan/Goal/Gconvert"
 )
 
 func TestConvert(t *testing.T) {
@@ -44,6 +45,6 @@ func TestConvert(t *testing.T) {
 	log.Println("sha256 ", Gconvert.Sha256("123456"))
 	log.Println("sha512 ", Gconvert.Sha512("123456"))
 
-	log.Println("ipinfo ", Gconvert.IPinfo("104.21.78.188", "176e8bd62f46b7"))
+	log.Println("ipinfo ", Gconvert.IPinfo("104.21.78.188", "ipinfo key"))
 
 }
