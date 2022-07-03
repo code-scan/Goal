@@ -6,3 +6,4 @@ cmd/logs
 cmd/
 tests/
 main.go
+./main.go
