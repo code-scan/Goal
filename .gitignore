@@ -3,3 +3,5 @@ push.sh
 github.com/
 cmd/main
 cmd/logs
+cmd/
+tests/
