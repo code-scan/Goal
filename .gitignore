@@ -1,2 +1,5 @@
 tests/sensor_test.go
 push.sh
+github.com/
+cmd/main
+cmd/logs

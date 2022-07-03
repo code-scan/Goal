@@ -31,7 +31,6 @@ func (h *Http) Post(urls string, params interface{}) error {
 func (h *Http) SetPostValues(values url.Values) {
 	h.HttpBody = strings.NewReader(values.Encode())
 	h.setParams()
-
 }
 
 //json 格式的参数
