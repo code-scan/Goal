@@ -2,6 +2,8 @@
 
 `如果要编译带ksubdomain的则需要 -tags ksub`
 
+> 文档可能更新不及时，具体使用可以看`tests`中的文件
+
 - #### Ghttp    Http客户端
     - [x] Get/Post/Head..
     - [x] SetHeader
