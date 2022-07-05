@@ -3,6 +3,16 @@
 
 > 文档可能更新不及时，具体使用可以看`tests`中的文件
 
+基于该项目我写了：
+    - [x] [求索 协同渗透测试平台](http://aq.mk/index.php/archives/94.html)
+    - [x] GoRat 跨平台C2
+    - [x] PaperCache [不安全信息聚合阅读](https://unsafe.sh)
+    - [x] [蹉跎 黑客工具箱](http://aq.mk/index.php/archives/111.html)
+    - [x] [NexusHack](https://github.com/code-scan/NexusHack)
+    - [x] [咪咕音乐下载器](https://github.com/code-scan/MiGuDownloander)
+    - [x] [WpGo wordpress批量快速爆破工具](https://github.com/code-scan/WpGo)
+    - [x] [DirGo 目录扫描小工具](https://github.com/code-scan/DirGo)
+    - ...
 - #### Ghttp    Http客户端
     - [x] Get/Post/Head..
     - [x] SetHeader
