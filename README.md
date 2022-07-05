@@ -23,6 +23,10 @@
     - [x] shodan
     - [x] Bufferover
     - [x] Crt.sh
+    - [x] ZoomEye
+    - [x] 爱企查
+    - [x] ksubdomain
+    - [x] WappalyzerGo
 
 - #### Gproxy   反向socks5代理
     - [x] Reverse Socks5 Proxy
@@ -33,6 +37,14 @@
     - [x] ReadFileToString
     - [x] WriteStringToFile
     - [x] GetFileList
+
+- ### GLogin 常用服务
+    - [x] mysql
+    - [x] postgres
+    - [x] mssql
+    - [x] ftp
+    - [x] pop3
+    - [x] smtp
 
 
 ## Ghttp client
