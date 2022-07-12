@@ -81,21 +81,25 @@ func (h *Http) readAll() ([]byte, error) {
 		return nil, fmt.Errorf("HttpResponse.Body is nil")
 	}
 	defer h.HttpResponse.Body.Close()
-	_, err := io.Copy(buffer, h.HttpResponse.Body)
-	if err != nil && err != io.EOF {
-		//log.Printf("readAll io.copy failure error:%v \n", err)
-		return nil, fmt.Errorf("readAll io.copy failure error:%v", err)
-	}
+
 	// 如果是gzip压缩则解压
 	if h.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
-		reader, err := gzip.NewReader(buffer)
+		ret, err := ioutil.ReadAll(h.HttpResponse.Body)
+		if err != nil && err != io.EOF {
+			return nil, err
+		}
+		reader, err := gzip.NewReader(bytes.NewReader(ret))
 		if err != nil && err != io.EOF {
 			return nil, err
 		}
 		defer reader.Close()
 		return ioutil.ReadAll(reader)
 	}
-
+	_, err := io.Copy(buffer, h.HttpResponse.Body)
+	if err != nil && err != io.EOF {
+		//log.Printf("readAll io.copy failure error:%v \n", err)
+		return nil, fmt.Errorf("readAll io.copy failure error:%v", err)
+	}
 	return buffer.Bytes(), nil
 }
 
