@@ -90,7 +90,9 @@ func (h *Http) readAll() ([]byte, error) {
 	if h.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
 		reader, err := gzip.NewReader(h.HttpResponse.Body)
 		if err != nil {
-			return nil, err
+			log.Println("gzipDecode error: ", err)
+			return buffer.Bytes(), nil
+			// return nil, err
 		}
 		defer reader.Close()
 		return ioutil.ReadAll(reader)
