@@ -90,7 +90,8 @@ func (h *Http) readAll() ([]byte, error) {
 		}
 		reader, err := gzip.NewReader(bytes.NewReader(ret))
 		if err != nil && err != io.EOF {
-			return nil, err
+			return ret, nil
+			// return nil, err
 		}
 		defer reader.Close()
 		return ioutil.ReadAll(reader)
