@@ -2,8 +2,10 @@ package Ghttp
 
 import (
 	"bytes"
+	"compress/gzip"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -85,14 +87,14 @@ func (h *Http) readAll() ([]byte, error) {
 	}
 	defer h.HttpResponse.Body.Close()
 	// 如果是gzip压缩则解压
-	// if h.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
-	// 	reader, err := gzip.NewReader(h.HttpResponse.Body)
-	// 	if err != nil && err != io.EOF {
-	// 		return nil, err
-	// 	}
-	// 	defer reader.Close()
-	// 	return ioutil.ReadAll(reader)
-	// }
+	if h.HttpResponse.Header.Get("Content-Encoding") == "gzip" {
+		reader, err := gzip.NewReader(h.HttpResponse.Body)
+		if err != nil && err != io.EOF {
+			return nil, err
+		}
+		defer reader.Close()
+		return ioutil.ReadAll(reader)
+	}
 	return buffer.Bytes(), nil
 }
 
