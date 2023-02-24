@@ -75,6 +75,9 @@ func (s *SecurityTrailsApi) GetBuildId() {
 		s.buildId = strings.Split(resp[1], `"`)[0]
 	}
 }
+func (s *SecurityTrailsApi) Login(_ bool) bool {
+	return true
+}
 
 // 子域名查询
 func (s *SecurityTrailsApi) GetSubDomain(page int) {
