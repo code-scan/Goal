@@ -1,13 +1,14 @@
 package test
 
 import (
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"net/url"
 	"os"
 	"runtime/pprof"
 	"testing"
 	"time"
+
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 func init() {
@@ -115,4 +116,16 @@ func TestManyReq(t *testing.T) {
 	for i := 0; i < 1000; i++ {
 		task <- "http://qq.com"
 	}
+}
+
+func TestNewReq(t *testing.T) {
+	log.Println("Ghttp test new")
+	h := Ghttp.New().Get("https://httpbin.org/get").
+		DontKeepAlive().
+		SetProxy("http://127.0.0.1:1234").
+		DontRedirect().
+		Execute()
+	// Text()
+	log.Println("err: ", h.Error())
+
 }

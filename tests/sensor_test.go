@@ -49,6 +49,19 @@ func TestSecTrail(t *testing.T) {
 	log.Println(r)
 
 }
+func TestSecTrailApi(t *testing.T) {
+	log.SetFlags(log.Lshortfile | log.LstdFlags)
+
+	ss := Gsensor.SecurityTrailsApi{}
+	//可以不登录，只能查询第一页
+	ss.SetPassword("NQIcGiQBA53myDkCS8wXj2d4MzauIdkH")
+	ss.SetDomain("360.cn")
+	ss.SetType("subdomain")
+	r := ss.GetResult()
+	log.Println(len(r))
+	log.Println(r)
+
+}
 func TestZoom(t *testing.T) {
 	z := Gsensor.ZoomEye{}
 	z.SetType("subdomain")
@@ -73,6 +86,13 @@ func TestBuff(t *testing.T) {
 	log.Println(r)
 }
 
+func TestRapid(t *testing.T) {
+	bf := Gsensor.RapidDns{}
+	bf.SetType("subdomain")
+	bf.SetDomain("freebuf.com")
+	r := bf.GetResult()
+	log.Println(r)
+}
 func TestCrt(t *testing.T) {
 	bf := Gsensor.CrtSh{}
 	bf.SetType("subdomain")

@@ -7,18 +7,21 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"os"
 	"strings"
 )
 
 // Execute 发送请求
-func (h *Http) Execute() *http.Response {
+func (h *Http) Execute() *Http {
 	defer func() {
 		if err := recover(); err != nil {
-			log.Println(err)
+			log.Println("recover: ", err)
 		}
 	}()
+	if h.err != nil {
+		log.Println("[!] Pre Http.Execute(): ", h.err)
+		return nil
+	}
 
 	//fmt.Printf("HttpTransport: %p \n", h.HttpTransport)
 	var err error
@@ -26,14 +29,14 @@ func (h *Http) Execute() *http.Response {
 	h.HttpResponse, err = h.HttpClient.Do(h.HttpRequest)
 	if err != nil {
 		log.Println("[!] Http Execute Error : ", err)
-		h.HttpResponse = nil
-		return nil
+		h.err = err
+		return h
 	}
-	return h.HttpResponse
+	return h
 }
 
 // Close 关闭请求与body
-func (h *Http) Close() {
+func (h *Http) Close() *Http {
 	defer func() {
 		if err := recover(); err != nil {
 			log.Println(err)
@@ -49,7 +52,7 @@ func (h *Http) Close() {
 	if h.CtxCancel != nil {
 		h.CtxCancel()
 	}
-
+	return h
 }
 
 // GetRespHead 获取返回头
@@ -111,6 +114,9 @@ func (h *Http) Text() (string, error) {
 			log.Println("Recovered in Text : ", r)
 		}
 	}()
+	if h.err != nil {
+		return "", h.err
+	}
 	r, err := h.readAll()
 	if err != nil {
 		return "", err
@@ -125,6 +131,9 @@ func (h *Http) Byte() ([]byte, error) {
 			log.Println("Recovered in Byte : ", r)
 		}
 	}()
+	if h.err != nil {
+		return nil, h.err
+	}
 	return h.readAll()
 }
 func (h *Http) SaveToFile(file string) (bool, error) {
@@ -134,6 +143,9 @@ func (h *Http) SaveToFile(file string) (bool, error) {
 			log.Println("Recovered in SaveToFile : ", r)
 		}
 	}()
+	if h.err != nil {
+		return false, h.err
+	}
 	if h.HttpResponse == nil {
 		log.Println("[!] HttpResponse Is Closed")
 		return false, fmt.Errorf("HttpResponse is nil")

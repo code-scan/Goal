@@ -11,10 +11,10 @@ import (
 )
 
 // POST 方法
-func (h *Http) Post(urls string, params interface{}) error {
-	err := h.New("POST", urls)
-	if err != nil {
-		return err
+func (h *Http) Post(urls string, params interface{}) *Http {
+	h.New("POST", urls)
+	if h.err != nil {
+		return h
 	}
 	switch params.(type) {
 	case string:
@@ -34,7 +34,7 @@ func (h *Http) SetPostValues(values url.Values) {
 }
 
 //json 格式的参数
-func (h *Http) SetPostJson(values map[string]interface{}) {
+func (h *Http) SetPostJson(values map[string]interface{}) *Http {
 	bytesData, err := json.Marshal(values)
 	if err != nil {
 		log.Println("[!] SetPostJson Error: ", err)
@@ -43,15 +43,17 @@ func (h *Http) SetPostJson(values map[string]interface{}) {
 	h.HttpBody = bytes.NewReader(bytesData)
 	h.SetContentType("json")
 	h.setParams()
+	return h
 
 }
 
 // 字符串格式的参数 a=1&b=2
-func (h *Http) SetPostString(values string) {
+func (h *Http) SetPostString(values string) *Http {
 	h.HttpBody = strings.NewReader(values)
 	h.setParams()
+	return h
 }
-func (h *Http) setParams() {
+func (h *Http) setParams() *Http {
 	if h.HttpRequest != nil && h.HttpBody != nil {
 		h.HttpRequest.Body = ioutil.NopCloser(h.HttpBody)
 		switch v := h.HttpBody.(type) {
@@ -80,4 +82,5 @@ func (h *Http) setParams() {
 
 		}
 	}
+	return h
 }

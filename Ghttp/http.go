@@ -34,6 +34,7 @@ type Http struct {
 	Ctx             context.Context
 	CtxCancel       context.CancelFunc
 	//Pool            *sync.Pool
+	err error
 }
 type Headers map[string]string
 
@@ -70,8 +71,9 @@ func New() *Http {
 }
 
 // 新建一个请求
-func (h *Http) New(method, urls string) error {
+func (h *Http) New(method, urls string) *Http {
 	var err error
+	h.err = nil
 	h.Ctx, h.CtxCancel = context.WithCancel(context.Background())
 	h.HttpRequestUrl = urls
 	h.HttpRequestType = method
@@ -95,7 +97,9 @@ func (h *Http) New(method, urls string) error {
 	h.IgnoreSSL()
 	h.HttpRequest, err = http.NewRequest(h.HttpRequestType, h.HttpRequestUrl, h.HttpBody)
 	h.HttpRequest.WithContext(h.Ctx)
-	return err
+	h.err = err
+	return h
+	// return err
 }
 func (h *Http) SetTimeOut(t int) {
 	td := time.Duration(t)
@@ -111,7 +115,7 @@ func (h *Http) IgnoreSSL() {
 	}
 }
 
-func (h *Http) SetProxy(proxyUrl string) {
+func (h *Http) SetProxy(proxyUrl string) *Http {
 	u, _ := url.Parse(proxyUrl)
 	switch u.Scheme {
 	case "https":
@@ -130,9 +134,10 @@ func (h *Http) SetProxy(proxyUrl string) {
 		h.SetSocksProxy(u.Host, &auth)
 
 	}
+	return h
 
 }
-func (h *Http) SetSocksProxy(proxyUrl string, auth *proxy.Auth) {
+func (h *Http) SetSocksProxy(proxyUrl string, auth *proxy.Auth) *Http {
 	baseDialer := &net.Dialer{
 		Timeout:   30 * time.Second,
 		KeepAlive: 30 * time.Second,
@@ -140,20 +145,28 @@ func (h *Http) SetSocksProxy(proxyUrl string, auth *proxy.Auth) {
 	dialSocksProxy, err := proxy.SOCKS5("tcp", proxyUrl, auth, baseDialer)
 	if err != nil {
 		log.Println("[!]SetSocksProxy Error: ", err)
-		return
+		h.err = err
+		return h
 	}
 	if contextDialer, ok := dialSocksProxy.(proxy.ContextDialer); ok {
 		h.HttpTransport.DialContext = contextDialer.DialContext
 	}
+	return h
 }
 
-func (h *Http) DontRedirect() {
+func (h *Http) DontRedirect() *Http {
 	h.HttpClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
 		return http.ErrUseLastResponse
 	}
+	return h
 }
-func (h *Http) DontKeepAlive() {
+func (h *Http) DontKeepAlive() *Http {
 	h.HttpTransport.DisableKeepAlives = true
+	return h
+}
+
+func (h *Http) Error() error {
+	return h.err
 }
 
 func Get(url, proxy string, headers Headers) ([]byte, error) {

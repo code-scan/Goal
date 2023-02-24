@@ -5,22 +5,22 @@ import (
 	"strings"
 )
 
-func (h *Http) AddCookieJar(key, val string) {
+func (h *Http) AddCookieJar(key, val string) *Http {
 	ck := http.Cookie{
 		Name:   key,
 		Value:  val,
 		Domain: "." + h.HttpRequest.Host,
 		Path:   "/",
 	}
-	if h.isSession{
+	if h.isSession {
 		h.HttpClient.Jar.SetCookies(h.HttpRequest.URL, []*http.Cookie{&ck})
-	}else{
+	} else {
 		h.Cookie.SetCookies(h.HttpRequest.URL, []*http.Cookie{&ck})
 	}
-
+	return h
 
 }
-func (h *Http) SetCookie(cookie string) {
+func (h *Http) SetCookie(cookie string) *Http {
 	if h.Cookie != nil {
 		cookies := strings.Split(cookie, ";")
 		for _, v := range cookies {
@@ -35,6 +35,6 @@ func (h *Http) SetCookie(cookie string) {
 		}
 	} else {
 		h.SetHeader("cookie", cookie)
-
 	}
+	return h
 }

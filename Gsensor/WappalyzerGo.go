@@ -2,11 +2,12 @@ package Gsensor
 
 import (
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
-	wappalyzer "github.com/projectdiscovery/wappalyzergo"
 	"io/ioutil"
 	"log"
 	"strings"
+
+	"github.com/code-scan/Goal/Ghttp"
+	wappalyzer "github.com/projectdiscovery/wappalyzergo"
 )
 
 type WappalyzerGo struct {
@@ -53,7 +54,7 @@ func (s *WappalyzerGo) GetResult() Result {
 		log.Println("resp nil")
 		return r
 	}
-	data, err := ioutil.ReadAll(resp.Body) // Ignoring error for example
+	data, err := ioutil.ReadAll(resp.HttpResponse.Body) // Ignoring error for example
 	if err != nil {
 		log.Println(err)
 		return r
@@ -63,7 +64,7 @@ func (s *WappalyzerGo) GetResult() Result {
 		log.Println(err)
 		return r
 	}
-	fingerprints := wappalyzerClient.Fingerprint(resp.Header, data)
+	fingerprints := wappalyzerClient.Fingerprint(resp.HttpResponse.Header, data)
 	for k := range fingerprints {
 		r[k] = ""
 	}
