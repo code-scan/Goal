@@ -106,11 +106,9 @@ func (s *Beian) SetDomain(domain string) {
 
 func (s *Beian) SetAccount(ac string) {
 	s.Account = ac
-	return
 }
 
 func (s *Beian) SetPassword(_ string) {
-	return
 }
 
 func (s *Beian) SetType(type_ string) {
@@ -119,7 +117,9 @@ func (s *Beian) SetType(type_ string) {
 
 func (s *Beian) GetResult() Result {
 	s.result = Result{}
-
+	if s.Account == "" {
+		return s.result
+	}
 	switch s.Type {
 	case "beian":
 		s.Beian()
