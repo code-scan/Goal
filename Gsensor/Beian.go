@@ -3,16 +3,18 @@ package Gsensor
 import (
 	"encoding/json"
 	"fmt"
+	"log"
+
 	"github.com/code-scan/Goal/Gconvert"
 	"github.com/code-scan/Goal/Ghttp"
-	"log"
 )
 
 type Beian struct {
-	Domain string
-	Type   string
-	result Result
-	http   Ghttp.Http
+	Domain  string
+	Type    string
+	Account string
+	result  Result
+	http    Ghttp.Http
 }
 
 type BeianResult struct {
@@ -48,6 +50,48 @@ type ResultBeian struct {
 	PageSize      int            `json:"pageSize"`
 }
 
+type BeianRet struct {
+	Code    int    `json:"code"`
+	Msg     string `json:"msg"`
+	Params  Params `json:"params"`
+	Success bool   `json:"success"`
+}
+type List struct {
+	ContentTypeName  string `json:"contentTypeName"`
+	Domain           string `json:"domain"`
+	DomainID         int64  `json:"domainId"`
+	LeaderName       string `json:"leaderName"`
+	LimitAccess      string `json:"limitAccess"`
+	MainID           int    `json:"mainId"`
+	MainLicence      string `json:"mainLicence"`
+	NatureName       string `json:"natureName"`
+	ServiceID        int    `json:"serviceId"`
+	ServiceLicence   string `json:"serviceLicence"`
+	UnitName         string `json:"unitName"`
+	UpdateRecordTime string `json:"updateRecordTime"`
+}
+type Params struct {
+	EndRow           int    `json:"endRow"`
+	FirstPage        int    `json:"firstPage"`
+	HasNextPage      bool   `json:"hasNextPage"`
+	HasPreviousPage  bool   `json:"hasPreviousPage"`
+	IsFirstPage      bool   `json:"isFirstPage"`
+	IsLastPage       bool   `json:"isLastPage"`
+	LastPage         int    `json:"lastPage"`
+	List             []List `json:"list"`
+	NavigatePages    int    `json:"navigatePages"`
+	NavigatepageNums []int  `json:"navigatepageNums"`
+	NextPage         int    `json:"nextPage"`
+	OrderBy          string `json:"orderBy"`
+	PageNum          int    `json:"pageNum"`
+	PageSize         int    `json:"pageSize"`
+	Pages            int    `json:"pages"`
+	PrePage          int    `json:"prePage"`
+	Size             int    `json:"size"`
+	StartRow         int    `json:"startRow"`
+	Total            int    `json:"total"`
+}
+
 func (s *Beian) GetInfo() string {
 	return "Beian ver 0.1 with  " + s.Type
 
@@ -60,7 +104,8 @@ func (s *Beian) SetDomain(domain string) {
 	s.Domain = domain
 }
 
-func (s *Beian) SetAccount(_ string) {
+func (s *Beian) SetAccount(ac string) {
+	s.Account = ac
 	return
 }
 
@@ -82,9 +127,8 @@ func (s *Beian) GetResult() Result {
 	return s.result
 }
 func (s *Beian) Beian() {
-	postData := fmt.Sprintf("keyword=%s&pageIndex=1&pageSize=2000", Gconvert.UrlEncode(s.Domain))
-	s.http.Post("https://m-beian.miit.gov.cn/webrec/queryRec", postData)
-	s.http.SetContentType("application/x-www-form-urlencoded")
+	uri := fmt.Sprintf("%s/open?domain=%s", s.Account, Gconvert.UrlEncode(s.Domain))
+	s.http.Get(uri)
 	s.http.Execute()
 	defer s.http.Close()
 	ret, err := s.http.Byte()
@@ -93,9 +137,10 @@ func (s *Beian) Beian() {
 		log.Println(err)
 		return
 	}
-	var r BeianResult
+	var r BeianRet
 	json.Unmarshal(ret, &r)
-	for _, result := range r.Result.Content {
+	log.Println(r)
+	for _, result := range r.Params.List {
 		key := fmt.Sprintf("%s|||%s", result.MainLicence, result.UnitName)
 		if _, ok := s.result[key]; ok {
 			s.result[key] = s.result[key] + ";" + result.Domain

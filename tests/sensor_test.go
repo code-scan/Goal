@@ -10,20 +10,21 @@ import (
 func TestFofa(t *testing.T) {
 	ff := Gsensor.Fofa{}
 	// api的邮箱与api的key
-	ff.SetAccount("xxxx@qq.com")
-	ff.SetPassword("xxxx")
+	ff.SetAccount("@qq.com")
+	ff.SetPassword("s")
 	ff.SetType("sameserver")
 	ff.SetType("subdomain")
 	//ff.SetType("ports")
 
-	ff.SetDomain("xxxx.com")
+	ff.SetDomain("freebuf.com")
 	r := ff.GetResult()
 	log.Println(r)
 }
 
 func TestBeian(t *testing.T) {
 	beian := Gsensor.Beian{}
-	beian.SetDomain("xxxxxx科技有限公司")
+	beian.SetDomain("baidu.com")
+	beian.SetAccount("http://127.0.0.1:65511/")
 	beian.SetType("beian")
 	result := beian.GetResult()
 	log.Printf("%#v", result)
