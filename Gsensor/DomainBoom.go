@@ -3,8 +3,9 @@ package Gsensor
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
+
+	"git.dev.me/jerry/Goal/Ghttp"
 )
 
 type DomainBoom struct {

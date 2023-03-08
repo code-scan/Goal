@@ -7,7 +7,7 @@ import (
 	"context"
 	_ "embed"
 	"fmt"
-	"github.com/code-scan/Goal/Gsensor/ksubdomain"
+	"git.dev.me/jerry/Goal/Gsensor/ksubdomain"
 	rateLimit "golang.org/x/time/rate"
 	"math/rand"
 	"strings"

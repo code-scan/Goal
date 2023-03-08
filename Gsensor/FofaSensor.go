@@ -7,7 +7,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/code-scan/Goal/Ghttp"
+	"git.dev.me/jerry/Goal/Ghttp"
 )
 
 type Fofa struct {

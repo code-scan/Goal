@@ -116,72 +116,72 @@
       <recent name="$PROJECT_DIR$/http" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian">
-    <configuration name="TestTcp in github.com/code-scan/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestBeian">
+    <configuration name="TestTcp in git.dev.me/jerry/Goal/tests" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <framework value="gotest" />
       <pattern value="^TestTcp$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestBeian" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="git.dev.me/jerry/Goal/tests 中的 TestBeian" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestBeian\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestFofa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="git.dev.me/jerry/Goal/tests 中的 TestFofa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestFofa\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestQiYe" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="git.dev.me/jerry/Goal/tests 中的 TestQiYe" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestQiYe\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestQiYeHold" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="git.dev.me/jerry/Goal/tests 中的 TestQiYeHold" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <pattern value="^\QTestQiYeHold\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/code-scan/Goal/tests 中的 TestSecTrail" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="git.dev.me/jerry/Goal/tests 中的 TestSecTrail" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Goal" />
       <working_directory value="$PROJECT_DIR$/tests" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/code-scan/Goal/tests" />
+      <package value="git.dev.me/jerry/Goal/tests" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -189,20 +189,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go 测试.TestTcp in github.com/code-scan/Goal/tests" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
-      <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYeHold" />
+      <item itemvalue="Go 测试.TestTcp in git.dev.me/jerry/Goal/tests" />
+      <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestSecTrail" />
+      <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestFofa" />
+      <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestBeian" />
+      <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestQiYe" />
+      <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestQiYeHold" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestBeian" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYe" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestQiYeHold" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestSecTrail" />
-        <item itemvalue="Go 测试.github.com/code-scan/Goal/tests 中的 TestFofa" />
+        <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestBeian" />
+        <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestQiYe" />
+        <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestQiYeHold" />
+        <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestSecTrail" />
+        <item itemvalue="Go 测试.git.dev.me/jerry/Goal/tests 中的 TestFofa" />
       </list>
     </recent_temporary>
   </component>

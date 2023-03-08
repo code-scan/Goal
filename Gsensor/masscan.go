@@ -2,9 +2,10 @@ package Gsensor
 
 import (
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
-	"github.com/dean2021/go-masscan"
 	"log"
+
+	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/dean2021/go-masscan"
 )
 
 type MassScan struct {

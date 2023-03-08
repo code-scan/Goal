@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/code-scan/Goal/Gsensor"
+	"git.dev.me/jerry/Goal/Gsensor"
 )
 
 func TestFofa(t *testing.T) {

@@ -3,9 +3,10 @@ package Gsensor
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"strings"
+
+	"git.dev.me/jerry/Goal/Ghttp"
 )
 
 type ZoomEye struct {

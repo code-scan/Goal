@@ -3,11 +3,12 @@ package Gsensor
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/code-scan/Goal/Ghttp"
-	"github.com/code-scan/Goal/Gnet"
 	"log"
 	"strconv"
 	"strings"
+
+	"git.dev.me/jerry/Goal/Ghttp"
+	"git.dev.me/jerry/Goal/Gnet"
 )
 
 type SecurityTrails struct {
@@ -99,7 +100,7 @@ func (s *SecurityTrails) GetBuildId() {
 	}
 }
 
-//子域名查询
+// 子域名查询
 func (s *SecurityTrails) GetSubDomain(page int) {
 	if page == 1 {
 		s.result = Result{}
@@ -140,7 +141,7 @@ func (s *SecurityTrails) GetSubDomain(page int) {
 	}
 }
 
-//历史记录查询
+// 历史记录查询
 func (s *SecurityTrails) GetHistory() {
 	s.result = Result{}
 	uri := "https://securitytrails.com/app/api/v1/history/" + s.Domain + "/dns/a"

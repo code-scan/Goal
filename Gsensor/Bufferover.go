@@ -2,9 +2,10 @@ package Gsensor
 
 import (
 	"encoding/json"
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"strings"
+
+	"git.dev.me/jerry/Goal/Ghttp"
 )
 
 type Bufferover struct {

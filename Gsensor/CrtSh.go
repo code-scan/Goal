@@ -1,10 +1,11 @@
 package Gsensor
 
 import (
-	"github.com/code-scan/Goal/Ghttp"
 	"log"
 	"regexp"
 	"strings"
+
+	"git.dev.me/jerry/Goal/Ghttp"
 )
 
 type CrtSh struct {

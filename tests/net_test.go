@@ -1,9 +1,10 @@
 package test
 
 import (
-"github.com/code-scan/Goal/Gnet"
-"log"
-"testing"
+	"log"
+	"testing"
+
+	"git.dev.me/jerry/Goal/Gnet"
 )
 
 func TestTcp(t *testing.T) {
