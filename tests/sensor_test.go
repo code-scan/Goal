@@ -145,7 +145,7 @@ func TestQiYe(t *testing.T) {
 	qiye := Gsensor.AiQiCha{}
 	qiye.SetType("qiye")
 	qiye.SetDomain("中国电信集团有限公司")
-	qiye.SetAccount("AiQiCha cookie")
+	qiye.SetAccount("")
 	ret := qiye.GetResult()
 	log.Println(ret)
 }

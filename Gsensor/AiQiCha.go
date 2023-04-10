@@ -3,6 +3,7 @@ package Gsensor
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 
@@ -85,13 +86,14 @@ func (s *AiQiCha) getQiye() {
 			corp.EntName = strings.ReplaceAll(corp.EntName, "</em>", "")
 			corp.EntName = fmt.Sprintf("%s|||%s", corp.EntName, corp.Pid)
 			s.result[corp.EntName] = s.getDomain(corp.Pid)
+			log.Println(s.result[corp.EntName])
 		}
 	}
 
 }
 func (s *AiQiCha) getQiyeHold() Result {
 	// 通过关键词查询，这里讲道理应该传递进来的企业id会更简单
-	uri := fmt.Sprintf("https://aiqicha.baidu.com/detail/holdsAjax?pid=%s&page=1&size=100", s.Domain)
+	uri := fmt.Sprintf("https://aiqicha.baidu.com/detail/holdsAjax?pid=%s&page=1&size=999", s.Domain)
 	ret, _ := s.get(uri)
 	var resp AiQiChaHoldResponse
 	json.Unmarshal(ret, &resp)
@@ -126,7 +128,7 @@ func (s *AiQiCha) getDomain(id string) string {
 }
 
 func (s *AiQiCha) getICP(id string) string {
-	uri := fmt.Sprintf("https://aiqicha.baidu.com/m/icpInfoAjax?pid=%s&page=0&size=100", id)
+	uri := fmt.Sprintf("https://aiqicha.baidu.com/m/icpInfoAjax?pid=%s&page=0&size=999", id)
 	ret, _ := s.get(uri)
 	var resp AiQiChaICPResponse
 	json.Unmarshal(ret, &resp)
