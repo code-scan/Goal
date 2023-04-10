@@ -6,8 +6,8 @@ import (
 	"log"
 	"strings"
 
-	"git.dev.me/jerry/Goal/Ghttp"
 	"github.com/PuerkitoBio/goquery"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 type RapidDns struct {

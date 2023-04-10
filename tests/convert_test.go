@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"git.dev.me/jerry/Goal/Gconvert"
+	"github.com/code-scan/Goal/Gconvert"
 )
 
 func TestConvert(t *testing.T) {

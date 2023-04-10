@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"git.dev.me/jerry/Goal/Glogin"
+	"github.com/code-scan/Goal/Glogin"
 )
 
 func TestLogin(t *testing.T) {

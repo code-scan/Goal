@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"git.dev.me/jerry/Goal/Gconvert"
-	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/code-scan/Goal/Gconvert"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 type Shodan struct {

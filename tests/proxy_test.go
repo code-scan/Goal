@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 
-	"git.dev.me/jerry/Goal/Gproxy"
+	"github.com/code-scan/Goal/Gproxy"
 )
 
 func TestProxy(t *testing.T) {

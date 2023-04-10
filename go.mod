@@ -1,4 +1,4 @@
-module git.dev.me/jerry/Goal
+module github.com/code-scan/Goal
 
 go 1.16
 

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 func init() {

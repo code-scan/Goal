@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"git.dev.me/jerry/Goal/Gnet"
+	"github.com/code-scan/Goal/Gnet"
 )
 
 func TestTcp(t *testing.T) {

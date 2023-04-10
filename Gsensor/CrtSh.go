@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 type CrtSh struct {

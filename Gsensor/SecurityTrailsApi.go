@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"git.dev.me/jerry/Goal/Ghttp"
-	"git.dev.me/jerry/Goal/Gnet"
+	"github.com/code-scan/Goal/Ghttp"
+	"github.com/code-scan/Goal/Gnet"
 )
 
 type SecurityTrailsApi struct {

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"git.dev.me/jerry/Goal/Gconvert"
-	"git.dev.me/jerry/Goal/Ghttp"
 	"github.com/CUCyber/ja3transport"
+	"github.com/code-scan/Goal/Gconvert"
+	"github.com/code-scan/Goal/Ghttp"
 	tls "github.com/refraction-networking/utls"
 )
 

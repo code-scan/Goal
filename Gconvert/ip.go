@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 type IPinfoResult struct {

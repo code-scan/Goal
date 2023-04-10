@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"git.dev.me/jerry/Goal/Ghttp"
+	"github.com/code-scan/Goal/Ghttp"
 )
 
 func TestCookie(t *testing.T) {
