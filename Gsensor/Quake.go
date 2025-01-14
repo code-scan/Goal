@@ -127,11 +127,17 @@ func (s *Quake) send(query string) []byte {
 	s.http.SetHeader("X-QuakeToken", s.PassWord)
 	s.http.SetHeader("Content-Type", "application/json")
 	query = strings.ReplaceAll(query, "\"", "\\\"")
+	size := "10000"
+	// 限制同服查询数量，防止遇到cdn爆了
+	if s.Type == "sameserver" {
+		size = "50"
+	}
 	query = `{
 		"query": "` + query + `",
 		"start": 0,
-		"size": 10000
+		"size": ` + size + `
 	}`
+
 	// log.Println(query)
 	// return nil
 	s.http.SetPostString(query)
