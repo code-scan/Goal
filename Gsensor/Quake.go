@@ -86,21 +86,21 @@ func (s *Quake) GetSubDomain(i int) {
 		}
 		s.result[host] = v.Ip
 	}
-
 }
 
 func (s *Quake) GetIp(i int) {
 	s.result = Result{}
-	// resp := s.send(`ip="` + s.Domain + `" && type=subdomain`)
-	// Quakeresult := QuakeResult{}
-	// json.Unmarshal(resp, &Quakeresult)
-	// for _, v := range Quakeresult.Results {
-	// 	host := v[0]
-	// 	if strings.Contains(host, "://") {
-	// 		host = strings.Split(host, "://")[1]
-	// 	}
-	// 	s.result[host] = v[1]
-	// }
+	resp := s.send(`ip:"` + s.Domain + `"`)
+	// log.Println(string(resp))
+	Quakeresult := QuakeResult{}
+	json.Unmarshal(resp, &Quakeresult)
+	for _, v := range Quakeresult.Data {
+		host := v.Domain
+		if strings.Contains(host, "://") {
+			host = strings.Split(host, "://")[1]
+		}
+		s.result[host] = v.Ip
+	}
 }
 
 func (s *Quake) GetPorts() {

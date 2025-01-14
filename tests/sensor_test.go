@@ -163,8 +163,11 @@ func TestQuake(t *testing.T) {
 	quake.SetPassword("40fc40e2-ff0a-4487-8e7e-a833ba9291b1")
 	quake.SetAccount("as")
 	quake.SetType("subdomain")
-	quake.SetDomain("freebuf.com")
-	// quake.GetSubDomain(1)
+	quake.SetDomain("wintopay.com")
+	log.Println(quake.GetResult())
+
+	quake.SetDomain("104.26.0.174")
+	quake.SetType("sameserver")
 	log.Println(quake.GetResult())
 }
 
