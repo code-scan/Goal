@@ -6,7 +6,6 @@ require (
 	github.com/CUCyber/ja3transport v0.0.0-20201031204932-8a22ac8ab5d7
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5
-	github.com/code-scan/Goal v0.4.0
 	github.com/dean2021/go-masscan v0.0.0-20181206040455-0ec37606e016
 	github.com/google/gopacket v1.1.19
 	github.com/hashicorp/yamux v0.0.0-20210316155119-a95892c5f864

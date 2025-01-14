@@ -158,6 +158,15 @@ func TestQiYeHold(t *testing.T) {
 	ret := qiye.GetResult()
 	log.Println(ret)
 }
+func TestQuake(t *testing.T) {
+	quake := Gsensor.Quake{}
+	quake.SetPassword("40fc40e2-ff0a-4487-8e7e-a833ba9291b1")
+	quake.SetAccount("as")
+	quake.SetType("subdomain")
+	quake.SetDomain("freebuf.com")
+	// quake.GetSubDomain(1)
+	log.Println(quake.GetResult())
+}
 
 // func TestSub(t *testing.T) {
 // 	log.SetFlags(log.Lshortfile | log.LstdFlags)
