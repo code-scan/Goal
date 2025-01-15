@@ -165,7 +165,7 @@ func TestQuake(t *testing.T) {
 	quake.SetType("subdomain")
 	quake.SetDomain("wintopay.com")
 	log.Println(quake.GetResult())
-
+	log.Println("========")
 	quake.SetDomain("104.26.0.174")
 	quake.SetType("sameserver")
 	log.Println(quake.GetResult())

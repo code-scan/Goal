@@ -2,6 +2,7 @@ package Gsensor
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"strings"
 
@@ -81,6 +82,7 @@ func (s *Quake) GetSubDomain(i int) {
 	json.Unmarshal(resp, &Quakeresult)
 	for _, v := range Quakeresult.Data {
 		host := v.Domain
+		// host := fmt.Sprintf("%s:%d", v.Domain, v.Port)
 		if strings.Contains(host, "://") {
 			host = strings.Split(host, "://")[1]
 		}
@@ -95,7 +97,10 @@ func (s *Quake) GetIp(i int) {
 	Quakeresult := QuakeResult{}
 	json.Unmarshal(resp, &Quakeresult)
 	for _, v := range Quakeresult.Data {
-		host := v.Domain
+		host := fmt.Sprintf("%s:%d", v.Domain, v.Port)
+		if v.Domain == "" {
+			host = fmt.Sprintf("%s:%d", v.Ip, v.Port)
+		}
 		if strings.Contains(host, "://") {
 			host = strings.Split(host, "://")[1]
 		}
